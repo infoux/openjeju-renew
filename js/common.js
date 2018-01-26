@@ -60,11 +60,14 @@ $(document).ready(function() {
 
 
   $("section.issue").each(function() {
-
     $(this).css("background", "url(" + $(this).find("img").attr("src") + ") no-repeat center / cover");
-
   });
 
+
+
+  $("section.main-food ul li a").each(function() {
+    $(this).css("background", "url(" + $(this).find("img").attr("src") + ") no-repeat center / cover");
+  });
 
 
 

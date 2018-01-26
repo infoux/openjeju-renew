@@ -445,7 +445,6 @@ body {
 /* style */
 
 body {
-    background: #999;
 
     &.menuon {
         width: 100vw;
@@ -1045,9 +1044,10 @@ body {
 
             .container {
                 .center;
+                .relative;
 
                 .search {
-                    h3 {
+                    h2 {
                         .block;
                         .rem(width, 197);
                         .rem(height, 99);
@@ -1058,7 +1058,7 @@ body {
                         @media all and (min-width: 1200px) {
                             width:284px;
                             height:143px;
-                            margin:40 AUTO 30;
+                            margin:40px auto 30px;
                         }
 
                     }
@@ -1208,8 +1208,10 @@ body {
                                     opacity:0;
                                     margin:0 auto 20px;
                                     font-size:50px;
+                                    .relative;
+                                    top:-10px;
                                     
-                                    .ani(0.5s);
+                                    .ani(0.2s);
                                 }
                             }
                             
@@ -1231,7 +1233,8 @@ body {
                                     padding-bottom:-4px;
                                     i {
                                         opacity:1;
-                                        .ani(1s);
+                                        .ani(0.3s);
+                                        top:0;
                                     }
                                     
                                     &::before {
@@ -1241,7 +1244,7 @@ body {
                                         margin-left:-7.5px;
                                         bottom:28.5px;
                                         border:3px solid @white;
-
+                                        
                                         background:#55361a;
                                     }
     
@@ -1253,6 +1256,270 @@ body {
                         }
                     }
                 }
+
+
+                &>i {
+                    color:@white;
+                    .rem(font-size, 26);
+                    .opacity(0.4);
+                    .absolute;
+                    .rem(bottom, 10);
+                    width:100%;
+                    left:0;
+
+
+                    @media all and (min-width: 1200px) {
+                        bottom:10px;
+                        font-size:38px;
+                    }
+
+                }
+
+            }
+
+        }
+
+        section.main-food {
+            .center;
+
+            .container {
+                .center;
+
+                h2 {
+                    .normal;
+                    .rem(font-size, 22);
+                    .rem(margin, 20 0);
+
+                    @media all and (min-width: 1200px) {
+                        font-size:38px;
+                        margin:50px 0 0;
+                    }
+
+
+                    small {
+                        .block;
+                        .rem(font-size, 12);
+                        .rem(margin, 10 0 0);
+                        color:#838383;
+
+                        @media all and (min-width: 1200px) {
+                            font-size:18px;
+                        }
+                    }
+                }
+
+                .food-link {
+
+                    @media all and (min-width: 1200px) {
+                        .right;
+                    }
+
+                    a {
+                        .inline-block;
+                        border:1px solid #555;
+                        .rem(border-radius, 3);
+                        .rem(padding, 4 10);
+                        color:#707070;
+
+                        @media all and (min-width: 1200px) {
+                            font-size:14px;
+                            margin-left:10px;
+                        }
+                    }
+                }
+
+                ul {
+                    .no-list;
+                    .rem(padding, 20 10);
+                    .zero;
+                    .relative;
+
+                    
+                    @media all and (min-width: 1200px) {
+                        padding:20px 0;
+                        padding-left:calc(~"100% - 450px");
+                    }
+
+                    li {
+                        .inline-block;
+                        .top;
+                        width:100%;
+                        .rem(height, 136);
+                        .rem(margin, 0 0 10);
+                        .drop-shadow();
+
+
+                        &:nth-child(n+3) {
+                            width:calc(~"(100% - 6px) / 2");
+                        }
+
+                        &:last-child {
+                            margin-left:6px;
+                            background:rgba(0,0,0,0.9);
+                            
+                            a {
+                                color:@white;
+
+                                strong {
+                                    .rem(padding, 52 0 0);
+                                    .normal;
+                                    .rem(font-size, 26);
+                                    .block;                                        
+                                    @media all and (min-width: 1200px) {
+                                        padding:70px 0 0;
+                                        font-size:38px;
+                                    }
+                                }
+                            }
+                        }
+
+                        a {
+                            .block;
+                            .relative;
+                            height:100%;
+                            
+                            font-family: "apple sd gothic neo", sans-serif;
+
+                            img {
+                                .none;
+                            }
+
+                            h3 {
+                                .block;
+                                .absolute;
+                                .left;
+                                bottom:0;
+                                left:0;
+                                right:0;
+                                .rem(height, 58);
+                                .rem(padding, 10);
+                                margin:0;
+                                background:rgba(255,255,255,0.9);
+                                .rem(font-size, 14);
+
+
+                    
+                                @media all and (min-width: 1200px) {
+                                    font-size:20px;
+                                    height:78px;
+                                }
+
+                                small {
+                                    .block;
+                                    .normal;
+                                    .rem(font-size, 9);
+                                    color:#515251;
+                                    .rem(margin, 4 0 0);
+                    
+                                    @media all and (min-width: 1200px) {
+                                        font-size:14px;
+
+                                    }
+                                }
+                            }
+
+                            p.rate {
+                                .absolute;
+                                .rem(right, 5);
+                                .rem(bottom, 5);
+                                .zero;
+
+                                @media all and (min-width: 1200px) {
+                                    right:10px;
+                                    bottom:10px;
+                                }
+
+                                i {
+                                    .rem(font-size, 12);
+                                    color:#fcaf17;
+
+                                    @media all and (min-width: 1200px) {
+                                        font-size:14px;
+                                    }
+
+                                    &::before {
+                                        margin:0;
+                                    }
+                                }
+                            }
+                        }
+
+                    
+                        @media all and (min-width: 1200px) {
+                            height:200px;
+
+                            &:first-child {
+                                .absolute;
+                                left:0;
+                                top:20px;
+                                width:740px;
+                                height:410px;
+
+                                a {
+                                    h3 {
+                                        font-size:32px;
+                                        height:104px;
+                                        padding:20px;
+
+                                        small {
+                                            font-size:18;
+                                            margin-top:8px;
+                                        }
+                                    }
+
+                                    p.rate {
+
+                                        i {
+                                            font-size:20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    
+                        
+                        p.info {
+                            .none;
+
+                
+                            @media all and (min-width: 1200px) {
+                                .block;
+                                .absolute;
+                                z-index:10;
+                                border-radius:50%;
+                                margin:0;
+                                left:-22px;
+                                top:-22px;
+                                font-size:14px;
+                                padding-top:36px;
+                                background:#fc9317;
+                                width:148px;
+                                height:148px;
+                                font-size:16px;
+                                color:@white;
+
+                                span {
+                                    .block;
+
+                                    strong {
+                                        .block;
+                                        .normal;
+                                        font-size:30px;
+                                        margin-top:5px;
+
+                                    }
+                                }
+
+                            }
+
+
+                        }
+                    }
+                }
+
+
+            
+
             }
         }
     }
