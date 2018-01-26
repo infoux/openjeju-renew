@@ -125,10 +125,16 @@
       "src": "entypo"
     },
     {
-      "uid": "474656633f79ea2f1dad59ff63f6bf07",
-      "css": "star",
+      "uid": "884cfc3e6e2d456dd2a2ca0dbb9e6337",
+      "css": "left-open-big",
       "code": 59401,
-      "src": "fontawesome"
+      "src": "entypo"
+    },
+    {
+      "uid": "004882ab2d5c418c5b2060e80596279b",
+      "css": "right-open-big",
+      "code": 59402,
+      "src": "entypo"
     }
   ]
 }
