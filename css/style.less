@@ -1835,6 +1835,22 @@ body {
                                 margin: 80px 0 0;
                             }
                         }
+
+
+
+                        &.cycle {
+                            .rem(width, 100);
+                            .rem(height, 24.5);
+                            background: url("../images/subtitle-cycle.svg") no-repeat;
+
+                            @media all and (min-width: 1200px) {
+                                width: 205px;
+                                height: 49px;
+                                margin: 80px 0 0;
+                            }
+                        }
+
+
                     }
 
                     nav.sub-menu {
@@ -1847,7 +1863,7 @@ body {
                             li {
                                 .inline-block;
                                 .top;
-                                .rem(font-size, 14);
+                                .rem(font-size, 12);
                                 .rem(height, 100);
 
                                 width: calc(~"100vw / 3") !important;
@@ -2137,7 +2153,7 @@ body {
                         padding-bottom: 45px;
                     }
 
-                    div.walk-map {
+                    div.theme-map {
                         .relative;
                         ul.tabs {
                             .absolute;
@@ -2315,6 +2331,10 @@ body {
 
                             &.tab02 {
                                 .zero;
+
+                                img {
+                                    width:100%;
+                                }
                             }
                         }
                     }
@@ -2337,21 +2357,36 @@ body {
 
                         li {
                             .inline-block;
+                            .relative;
                             width: 100%;
                             .rem(padding, 10);
                             .rem(margin, 0 0 10);
                             background: @white;
                             .drop-shadow();
+                            .zero;
 
                             a {
-                                img {
-                                    width: 100%;
+
+
+                                p.img {
+                                    .mapazero;
+                                    .rem(height, 185);
+                                    .hidden;
 
                                     @media all and (min-width: 1200px) {
-                                        width: 262px;
                                         float: left;
+                                        width: 262px;
+                                        height: 208px;
+
+                                    }
+
+                                    img {
+                                        min-width: 100%;
+                                        min-height:100%;
                                     }
                                 }
+
+
                                 h5 {
                                     .rem(font-size, 12);
                                     .rem(margin, 10 0);
@@ -2373,8 +2408,175 @@ body {
                                         width: 890px;
                                         float: right;
                                         font-size: 14px;
+                                        min-height:137px;
                                     }
                                 }
+                            }
+
+                            button.photo-view {
+                                .block;
+                                .absolute;
+                                .rem(right, 20);
+                                .rem(top, 133);
+                                border:none;
+                                background:white;
+                                color:@main;
+                                .rem(width, 52);
+                                .rem(height, 52);
+                                border-radius:50%;
+                                .rem(font-size, 10);
+                                .drop-shadow();
+
+
+
+                                @media all and (min-width: 1200px) {
+                                    width:60px;
+                                    height:60px;
+                                    right:auto;
+                                    left:20px;
+                                    top:148px;
+                                }
+
+
+
+                                &.on {
+                                    background:@main;
+                                    color:@white;
+                                }
+
+                                i {
+                                    .block;
+                                    .rem(font-size, 20);
+                                    .rem(margin, 0 0 2);
+                                }
+
+                            }
+
+                            div.photo-view {
+                                .none;
+                                .remPlus(width, 20);
+                                .relative;
+                                clear:both;
+                                background:#fafafa;
+                                border-top:1px solid #ccc;
+                                .rem(margin, 0 -10 -10);
+                                .rem(padding, 10 0);
+
+                                @media all and (min-width: 1200px) {
+
+                                    width:calc(~"100% + 20px");
+                                    padding:20px;
+                                    margin:10px -10px -10px;
+                                }
+
+                                &.open {
+                                    .inline-block;
+                                }
+    
+
+                                .slick-list {
+                                    .hidden;
+   
+                                    div.slick-track {
+
+                
+                                        .slick-slide {
+                                            .inline-block;
+                                            .top;
+                                            .relative;
+                                            .rem(width, 203);
+                                            .rem(height, 130);
+                                            .rem(margin, 0 5 0);
+                                            .drop-shadow();
+                
+                                            @media all and (min-width: 1200px) {
+                                                width: calc(~"(1200px - 50px) / 3") !important;
+                                                height: 220px;
+                                            }
+                
+
+                
+                                                &::after {
+                                                    content: "";
+                                                    .block;
+                                                    .absolute;
+                                                    .full-position;
+                                                    background: rgba(0,0,0,0.3);
+                                                    opacity: 1;
+                                                    .ani();
+                
+                                                    @media all and (min-width: 1200px) {
+                                                        opacity: 0;
+                                                    }
+                
+                                                }
+                
+                                                img {
+                                                    .none;
+                                                }
+                
+                
+                                            }
+                
+                                            &.slick-center {
+                                                a {
+                
+                                                    &::after {
+                                                        opacity: 0;
+                                                        .ani(1s);
+                                                    }
+                                                }
+                                            }
+                
+                                        }
+                                    }
+                                }
+                
+                                button {
+                                    .block;
+                                    .absolute;
+                                    .rem(top, 0);
+                                    border: none;
+                                    padding: 0;
+                                    .zero;
+                                    color: #333;
+
+                                    .rem(width, 55);
+                                    .rem(height, 150);
+                                    outline: none;
+                
+                                    @media all and (min-width: 1200px) {
+                                        width: 54px;
+                                        height: 260px;
+                
+                                    }
+                
+                                    &.trip-prev {
+                                            .left;
+                                            left: 0;
+                                            .gradienth(#fafafa, rgba(255,255,255,0.5), rgba(255,255,255,0));
+
+                                           
+                                    }
+                
+                                    &.trip-next {
+                                            .right;
+                                            right: 0;
+                                            .gradienth(rgba(255,255,255,0), rgba(255,255,255,0.5), #fafafa);
+                                        }
+                
+                                    i {
+                                        .rem(font-size, 24);
+
+                                        &::before {
+                                            margin:0;
+                                        }
+                                        @media all and (min-width: 1200px) {
+                                            font-size: 40px;
+                                        }
+                                    }
+                                }
+
                             }
                         }
                     }
@@ -2907,6 +3109,7 @@ body {
                                         }
 
                                         small {
+                                            .inline-block;
                                             font-size:inherit;
                                             .normal;
                                             .relative;
@@ -2917,7 +3120,7 @@ body {
                                                 .inline-block;
                                                 .absolute;
                                                 .rem(left, 10);
-                                                .rem(top, 4);
+                                                .rem(top, 2);
                                                 width:1px;
                                                 .rem(height, 8);
                                                 background:#ccc;
@@ -2928,7 +3131,7 @@ body {
                                                 .inline-block;
                                                 .absolute;
                                                 .rem(right, 10);
-                                                .rem(top, 4);
+                                                .rem(top, 2);
                                                 width:1px;
                                                 .rem(height, 8);
                                                 background:#ccc;
@@ -2972,7 +3175,6 @@ body {
                                 }
                             }
                         }
-                    }
 
 
 
