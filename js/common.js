@@ -138,7 +138,19 @@ $(document).ready(function () {
         $('.tab.' + tab).addClass('active');
       });
     
+      
+  /* STAR_RATE*/
+  var $starRate = $('.star-rate');
+  if ($starRate.length > 0) $starRate.on('click', 'a', function() {
+    var starValue = $(this).attr("data");
+    $starRate.find('a').each(function() {
+      $(this).find("i").removeClass("on");
+      if ($(this).attr("data") <= starValue) {
 
+        $(this).find("i").addClass("on");
+      }
+    });
+  });
 
 
 
