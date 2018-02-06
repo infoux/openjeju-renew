@@ -372,19 +372,25 @@
     .box-sizing;
 }
 
+
 input,
 select,
 textarea {
     .border-radius(0);
-    appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -webkit-appearance: none;
 
-    &::-ms-expand {
-        display: none;
+    @media all and (max-width: 1199px) {
+        appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -webkit-appearance: none;
+
+        &::-ms-expand {
+            display: none;
+        }
     }
+
 }
+
 
 a {
     text-decoration: none;
@@ -1851,6 +1857,30 @@ body {
                         }
 
 
+                        &.festival {
+                            .rem(width, 104.5);
+                            .rem(height, 30);
+                            background: url("../images/subtitle-festival.svg") no-repeat;
+
+                            @media all and (min-width: 1200px) {
+                                width: 209px;
+                                height: 60px;
+                                margin: 75px 0 0;
+                            }
+                        }
+
+
+                        &.plan {
+                            .rem(width, 85);
+                            .rem(height, 28.5);
+                            background: url("../images/subtitle-plan.svg") no-repeat;
+
+                            @media all and (min-width: 1200px) {
+                                width: 170px;
+                                height: 57px;
+                                margin: 75px 0 0;
+                            }
+                        }
                     }
 
                     nav.sub-menu {
@@ -1997,6 +2027,32 @@ body {
                                 }
                             }
 
+                            &.num1 {
+                                li {
+                                    width: 100% !important;
+                                    .zero;
+
+                                    &::after {
+                                        content: "";
+                                        .none;
+                                    }
+
+                                    
+                                    a {
+                                        padding-bottom: -4px;
+                                        i {
+                                            opacity: 1;
+                                            .ani(0.3s);
+                                            top: 0;
+                                        }
+
+                                        &::before {
+                                           .none;
+                                        }
+                                    }
+                                }
+                            }
+
                             @media all and (min-width: 1200px) {
                                 margin: 10px auto 20px;
                                 width: 100%;
@@ -2110,42 +2166,45 @@ body {
 
             /* contents header */
             .content-head {
+                .center;
 
-                h2 {
-                    .center;
-                    .rem(font-size, 26);
-                    .rem(margin, 25 0 15);
-                    .normal;
+                .container {
 
-                    @media all and (min-width: 1200px) {
-                        font-size: 40px;
-                        margin: 60px 0 34px;
+                    h2 {
+                        .center;
+                        .rem(font-size, 26);
+                        .rem(margin, 25 0 10);
+                        .normal;
 
-                    }
-                }
+                        @media all and (min-width: 1200px) {
+                            font-size: 40px;
+                            margin: 60px 0 26px;
 
-                div.info-text {
-                    .center;
-                    font-family: sans-serif;
-                    .rem(font-size, 10);
-                    line-height: 1.6;
-                    color: #555;
-                    .rem(margin, 0 0 15);
-
-                    @media all and (min-width: 1200px) {
-                        font-size: 18px;
-                        word-break: keep-all;
-                        margin: 0 0 34px;
-
+                        }
                     }
 
+                    div.info-text {
+                        .center;
+                        font-family: sans-serif;
+                        .rem(font-size, 10);
+                        line-height: 1.6;
+                        color: #555;
+                        .rem(margin, 0 0 15);
+
+                        @media all and (min-width: 1200px) {
+                            font-size: 18px;
+                            word-break: keep-all;
+                            margin: 0 0 34px;
+
+                        }
+
+                    }
                 }
 
             }
 
             section.theme-info {
 
-                .center;
                 .container {
                     .rem(padding-bottom, 15);
 
@@ -2291,6 +2350,7 @@ body {
                                         .mapazero;
                                         .rem(height, 60);
                                         word-break: keep-all;
+                                        color:#555;
 
                                         @media all and (min-width: 1200px) {
                                             float: right;
@@ -2343,7 +2403,10 @@ body {
 
             section.list-basic {
                 .center;
-                background: #f4f4f4;
+
+                &.walk {
+                    background: #f4f4f4;
+                }
                 .container {
                     .rem(padding-top, 15);
 
@@ -2362,6 +2425,7 @@ body {
                             .rem(padding, 10);
                             .rem(margin, 0 0 10);
                             background: @white;
+                            border:1px solid #eee;
                             .drop-shadow();
                             .zero;
 
@@ -2388,7 +2452,7 @@ body {
 
 
                                 h5 {
-                                    .rem(font-size, 12);
+                                    .rem(font-size, 14);
                                     .rem(margin, 10 0);
                                     .normal;
 
@@ -2403,6 +2467,7 @@ body {
                                     line-height: 1.6;
                                     font-family: sans-serif;
                                     color: #555;
+                                    margin:0;
 
                                     @media all and (min-width: 1200px) {
                                         width: 890px;
@@ -2583,6 +2648,257 @@ body {
 
                 }
             }
+
+
+
+
+            section.list-festival {
+                .center;
+                .container {
+                    .center;
+                    .rem(padding-top, 15);
+
+                    @media all and (min-width: 1200px) {
+                        padding-top: 45px;
+                    }
+
+                    fieldset {
+                        .zero;
+                        margin:0;
+                        border:none;
+                        .rem(padding, 0 10);
+                        @media all and (min-width: 1200px) {
+                            padding:0;
+                            .right;
+                        }
+
+
+                        p {
+                            .inline-block;
+                            .relative;
+                            border:1px solid #ccc;
+                            .rem(border-radius, 5);
+                            .rem(padding, 0 0 0 10);
+                            .hidden;
+                            width:calc(~"50% - 40px");
+                            margin-right:3px;
+
+                            @media all and (min-width: 1200px) {
+                                width:130px;
+                            }
+
+                            select {
+                                .rem(font-size, 12);
+                                .rem(height, 34);
+                                border:0;
+                                width:100%;
+                                outline:none;
+                            }
+
+                            &::before {
+                                content:"";
+                                z-index:10;
+                                .inline-block;
+                                .absolute;
+                                .rem(right, 8);
+                                .rem(top, 14);
+                                border-color:@white;
+                                border-top-color:#ccc;
+                                border-style:solid;
+                                .rem(border-width, 5);
+                            }
+
+                            @media all and (min-width: 1200px) {
+                                &::after {
+                                    content:"";
+                                    .block;
+                                    .absolute;
+                                    right:0;
+                                    top:0;
+                                    width:20px;
+                                    height:100%;
+                                    background:@white;
+      
+                                        width:20px;
+                                }
+                            }
+
+                        }
+
+                        button {
+                            
+                            .top;
+                            .rem(height, 34);
+                            .rem(border-radius, 5);
+                            border:none;
+                            background:@main;
+                            color:@white;
+                            width:54px;
+
+                            @media all and (min-width: 1200px) {
+                                width:42px;
+                            }
+
+                            i {
+                                .rem(font-size, 14);
+                            }
+                        }
+                    }
+
+                    dl.list {
+                        .rem(padding, 0 10);
+                        .relative;
+
+                        @media all and (min-width: 1200px) {
+                            padding:0;
+                         }
+                        &::before {
+                            content:"";
+                            .absolute;
+                            left:50%;
+                            z-index:-1;
+                            .rem(top, 20);
+                            .rem(bottom, 20);
+                            width:2px;
+                            background:#cce3f2;
+
+                            @media all and (min-width: 1200px) {
+                                left:31px;
+                                top:30px;
+                                bottom:0;
+ 
+                             }
+                        }
+                        dt {
+                            .inline-block;
+                            background:@main;
+                            color:@white;
+                            .rem(width, 56);
+                            .rem(height, 47);
+                            .rem(line-height, 47);
+                            .rem(font-size, 24);
+                            .normal;
+                            .rem(margin, 20 0);
+
+                            @media all and (min-width: 1200px) {
+                               float:left;
+                               .absolute;
+                               width:62px;
+                               height:52px;
+                               line-height:52px;
+                               margin:30px 0 0;
+                               font-size:26px;
+
+                            }
+                        }
+
+                        dd {
+                            .drop-shadow();
+                            .relative;
+                            .rem(margin, 0 0 20);
+                            .rem(padding, 15);
+                            border:1px solid #eee;
+                            background:@white;
+
+                            @media all and (min-width: 1200px) {
+                                margin-left:70px;
+                                min-height:206px;
+                                .left;
+                                padding-left:302px;
+
+                                &::before {
+                                    content:"";
+                                    .block;
+                                    .absolute;
+                                    left:-44px;
+                                    top:100px;
+                                    width:5px;
+                                    height:5px;
+                                    background:@white;
+                                    border:3px solid @main;
+                                    border-radius:50%;
+                                }
+                             }
+
+                             p.image {
+                                 .mapazero;
+
+                                 
+                                @media all and (min-width: 1200px) {
+                                    .absolute;
+                                    left:15px;
+                                    top:15px;
+                                    width:262px;
+                                    height:152px;
+    
+                                }
+
+                                img {
+                                    width:100%;
+                                }
+                            }
+
+                            h3 {
+                                .rem(font-size, 18);
+                                .rem(margin, 20 0 4);
+                                .normal;
+
+                                @media all and (min-width: 1200px) {
+                                    font-size:28px;
+                                }
+
+                            }
+
+                            p.text {
+                                .rem(font-size, 10);
+                                .mapazero;
+                                color:#555;
+
+                                @media all and (min-width: 1200px) {
+                                    font-size:18px;
+                                }
+
+                            }
+
+                            i {
+                                .block;
+                                font-style:normal;
+                                .rem(font-size, 12);
+                                color:@main;
+                                .rem(margin, 10 0 4);
+
+                                @media all and (min-width: 1200px) {
+                                    font-size:18px;
+                                    margin:10px 0 6px;
+                                }
+
+                            }
+
+                            span {
+                                .rem(font-size, 10);
+                                color:#555;
+
+                                @media all and (min-width: 1200px) {
+                                    font-size:16px;
+                                }
+                            }
+                        }
+                        @media all and (min-width: 1200px) {
+                            dt + dd {
+                                .inline-block;
+                                margin-top:30px;
+    
+                            }
+                         }
+
+                    }
+                }
+            }
+
+
+
+
+
 
             section.view-info {
                 .center;

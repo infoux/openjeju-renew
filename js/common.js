@@ -25,15 +25,21 @@ $(document).ready(function () {
 
             try {
 
-                var mobileSub = $('.mobile .sub-menu ul').slick({
-                    speed: 1000,
-                    infinite: false,
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    variableWidth: true,
-                    prevArrow: ".submenu-prev",
-                    nextArrow: ".submenu-next"
-                });
+                if ($('.mobile .sub-menu ul').hasClass("num1")) {
+                    $('.mobile .sub-menu button').css("display", "none");
+
+                } else {
+
+                    var mobileSub = $('.mobile .sub-menu ul').slick({
+                        speed: 1000,
+                        infinite: false,
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        variableWidth: true,
+                        prevArrow: ".submenu-prev",
+                        nextArrow: ".submenu-next"
+                    });
+                }
 
                 $('.mobile .sub-menu ul').slick(
                     'slickGoTo',
@@ -126,7 +132,7 @@ $(document).ready(function () {
 
         $("div.photo-view").removeClass("open");
         $(this).parent().find("div.photo-view").addClass("open");
-
+ 
 
         try {
             $('div.photo-view.'+ $(this).attr("data") +' div.list').slick('unslick');
@@ -143,6 +149,7 @@ $(document).ready(function () {
             prevArrow: ".trip-prev",
             nextArrow: ".trip-next"
         });
+
         $("div.photo-view div.list div.slick-slide").each(function () {
             $(this).css(
                 "background",
