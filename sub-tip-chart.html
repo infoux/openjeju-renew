@@ -27,7 +27,7 @@
         <!-- E:skip_navi -->
 
         <!-- S:header -->
-        <header id="header">
+        <header id="header" class="no-issue">
             <div class="container">
                 <button class="menuToggle">
                     <i class="icon-menu" aria-hidden="true"></i>토글</button>
@@ -225,208 +225,73 @@
         <!-- S:content -->
         <div id="content" class="sub">
 
-            <section class="sub-head">
-                <img src="images/@sub-theme-plan.jpg">
-                <div class="container">
-                    <h2 class="plan">여행일정</h2>
-                    <nav class="sub-menu">
-                        <ul class="num1">
-                            <li>
-                                <a href="">
-                                    <i class="icon-plan" aria-hidden="true"></i>여행일정</a>
-                            </li>
-
-                        </ul>
-
-                        <button class="submenu-prev">
-                            <i class="icon-left-open-big" aria-hidden="true"></i>이전</button>
-                        <button class="submenu-next">
-                            <i class="icon-right-open-big" aria-hidden="true"></i>다음</button>
-                    </nav>
-
-                </div>
-            </section>
-
             <section class="content-head">
                 <div class="container">
-                    <h2>추천 여행일정</h2>
-
-                    <div class="info-text">
-                        추천 여행 일정 목록입니다.<br>
-                        마음에 드는 여행지를 담으세요.
-                    </div>
-
+                    <h2>입도객 현황데이터</h2>
                 </div>
             </section>
 
-            <section class="list-plan">
+            <section class="chart">
                 <div class="container">
 
-                    <ul class="list">
-                        <li>
-                            <p class="img"><img src="images/@tmp-food01.jpg" alt=""></p>
-                            <h3>숲을 걸어가다
-                                <small>한번 걸어보고 치유가 된다는 숲길</small>
-                            </h3>
-                            <p class="tag">
-                                <i>2박 3일</i>
-                            </p>
+                    <fieldset>
+                        <legend class="sr-only">검색조건</legend>
 
-                            <div class="info">
-                                <div class="star-rate">
-                                    <h4>평점</h4>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star-empty" aria-hidden="true"></i>
-                                    <i class="icon-star-empty" aria-hidden="true"></i>
-                                    <i class="icon-star-empty" aria-hidden="true"></i>
-                                </div>
+                        <dl>
+                            <dt>대상</dt>
+                            <dd>
 
-                                <p class="review">리뷰 <strong>216</strong></p>
-                                <p class="recomm">추천 <strong>52</strong></p>
-                            </div>
+                                <input type="radio" id="region-all" name="searchTarget" value="">
+                                <label for="region-all">전체</label>
+                                <input type="radio" id="local" name="searchTarget" value="내국인">
+                                <label for="local">내국인</label>
+                                <input type="radio" id="foreigner" name="searchTarget" value="외국인">
+                                <label for="foreigner">외국인</label>
 
-                            <a class="view" href="">
-                                여행 일정 보러가기
-                            </a>
-                            <a class="bookmark" href="#">
-                                <i class="icon-bookmark" aria-hidden="true"></i>북마크
-                            </a>
-                        </li>
-                        <li>
-                            <p class="img"><img src="images/@tmp-food01.jpg" alt=""></p>
-                            <h3>숲을 걸어가다
-                                <small>한번 걸어보고 치유가 된다는 숲길</small>
-                            </h3>
-                            <p class="tag">
-                                <i>2박 3일</i>
-                            </p>
+                            </dd>
+                            <dt>주제</dt>
+                            <dd>
+                                <input id="type01" type="radio" name="searchType" value="형태별" checked="checked">
+                                <label for="type01">형태별</label>
+                                <input id="type02" type="radio" name="searchType" value="목적별">
+                                <label for="type02">목적별</label>
 
-                            <div class="info">
-                                <div class="star-rate">
-                                    <h4>평점</h4>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                </div>
+                            </dd>
+                            <dt>표출자료</dt>
 
-                                <p class="review">리뷰 <strong>216</strong></p>
-                                <p class="recomm">추천 <strong>52</strong></p>
-                            </div>
+                            <dd>
+                                <input type="radio" id="dpType01" name="displayType" value="월계">
+                                <label for="dpType01">월계</label>
+                                <input type="radio" id="dpType02" name="displayType" value="cumulate">
+                                <label for="dpType02">누계</label>
+                            </dd>
+                            <dt>기간</dt>
+                            <dd>
 
-                            <a class="view" href="">
-                                여행 일정 보러가기
-                            </a>
-                            <a class="bookmark" href="#">
-                                <i class="icon-bookmark-empty" aria-hidden="true"></i>북마크
-                            </a>
-                        </li>
-                        <li>
-                            <p class="img"><img src="images/@tmp-food01.jpg" alt=""></p>
-                            <h3>숲을 걸어가다
-                                <small>한번 걸어보고 치유가 된다는 숲길</small>
-                            </h3>
-                            <p class="tag">
-                                <i>2박 3일</i>
-                            </p>
+                                <input id="month01" type="radio" name="dateType" value="1">
+                                <label for="month01">1개월</label>
+                                <input id="month02" type="radio" name="dateType" value="3">
+                                <label for="month02">3개월
+                                </label>
+                                <input id="month03" type="radio" name="dateType" value="6">
+                                <label for="month03">6개월</label>
+                                <input id="month04" type="radio" name="dateType" value="11" checked="checked">
+                                <label for="month04">1년</label>
+                            </dd>
+                            <dt>
+                                <label for="startDate">시작일</label>
+                            </dt>
+                            <dd><input type="month" name="startDate" id="startDate" value="2016-08"></dd>
+                            <dt>
+                                <label for="endDate">종료일</label>
+                            </dt>
+                            <dd><input type="month" name="endDate" id="endDate" value="2017-07"></dd>
 
-                            <div class="info">
-                                <div class="star-rate">
-                                    <h4>평점</h4>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                </div>
+                        </dl>
 
-                                <p class="review">리뷰 <strong>216</strong></p>
-                                <p class="recomm">추천 <strong>52</strong></p>
-                            </div>
+                        <button type="button" onclick="loadChart()">조회하기</button>
+                    </fieldset>
 
-                            <a class="view" href="">
-                                여행 일정 보러가기
-                            </a>
-                            <a class="bookmark" href="#">
-                                <i class="icon-bookmark-empty" aria-hidden="true"></i>북마크
-                            </a>
-                        </li>
-                        <li>
-                            <p class="img"><img src="images/@tmp-food01.jpg" alt=""></p>
-                            <h3>숲을 걸어가다
-                                <small>한번 걸어보고 치유가 된다는 숲길</small>
-                            </h3>
-                            <p class="tag">
-                                <i>2박 3일</i>
-                            </p>
-
-                            <div class="info">
-                                <div class="star-rate">
-                                    <h4>평점</h4>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                </div>
-
-                                <p class="review">리뷰 <strong>216</strong></p>
-                                <p class="recomm">추천 <strong>52</strong></p>
-                            </div>
-
-                            <a class="view" href="">
-                                여행 일정 보러가기
-                            </a>
-                            <a class="bookmark" href="#">
-                                <i class="icon-bookmark-empty" aria-hidden="true"></i>북마크
-                            </a>
-                        </li>
-                        <li>
-                            <p class="img"><img src="images/@tmp-food01.jpg" alt=""></p>
-                            <h3>숲을 걸어가다
-                                <small>한번 걸어보고 치유가 된다는 숲길</small>
-                            </h3>
-                            <p class="tag">
-                                <i>2박 3일</i>
-                            </p>
-
-                            <div class="info">
-                                <div class="star-rate">
-                                    <h4>평점</h4>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                    <i class="icon-star" aria-hidden="true"></i>
-                                </div>
-
-                                <p class="review">리뷰 <strong>216</strong></p>
-                                <p class="recomm">추천 <strong>52</strong></p>
-                            </div>
-
-                            <a class="view" href="">
-                                여행 일정 보러가기
-                            </a>
-                            <a class="bookmark" href="#">
-                                <i class="icon-bookmark-empty" aria-hidden="true"></i>북마크
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="pagenation">
-
-                        <a class="move" href="">이전<i class="icon-left-open-big" aria-hidden="true"></i>
-                        </a>
-                        <a href="">1</a>
-                        <a href="">2</a>
-                        <strong>3</strong>
-                        <a href="">4</a>
-                        <a href="">5</a>
-                        <a class="move" href="">다음<i class="icon-right-open-big" aria-hidden="true"></i>
-                        </a>
-
-                    </div>
                 </div>
             </section>
 

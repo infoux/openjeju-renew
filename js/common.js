@@ -46,6 +46,22 @@ $(document).ready(function () {
                     $('.mobile .sub-menu ul li a.active').parent().index()
                 );
 
+                $('.rankoutline').slick({
+
+                    prevArrow: ".prev",
+                    nextArrow: ".next",
+                    breakpoint: 1199,
+                    speed: 1000,
+                    dots: true,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    adaptiveHeight: true,
+                    autoplaySpeed: 2000
+                });
+            
+
+
             } catch (e) {}
 
         } else {
@@ -63,8 +79,8 @@ $(document).ready(function () {
 
             try {
                 $('.sub-menu ul').slick('unslick');
+                $('.rankoutline').slick('unslick');
             } catch (e) {}
-
         }
     }
 
@@ -123,6 +139,51 @@ $(document).ready(function () {
         nextArrow: ".trip-next"
     });
 
+    $('.food-slider .outline').slick({
+        speed: 1000,
+        centerMode: true,
+        variableWidth: true,
+        slidesToShow: 7,
+        variableWidth: true,
+        prevArrow: ".food-prev",
+        nextArrow: ".food-next",
+        autoplay: true,
+        autoplaySpeed: 2000,
+        
+        responsive: [
+            {
+              breakpoint: 1199,
+              settings: {
+                slidesToShow: 3
+
+              }
+            }
+        ]
+
+    });
+
+
+    $(".plan-map button.reply").click(function () {
+        $(this).parent().find("div.reply").toggleClass("on");
+        $(this).toggleClass("on");
+    });
+
+
+
+    $(".plan-map .list dt button").click(function () {
+        $(".plan-map div.search").toggleClass("on");
+
+    });
+
+
+
+    $(".plan-map div.search h3 button").click(function () {
+        $(".plan-map div.search").toggleClass("on");
+
+    });
+
+
+
 
 
     $("button.photo-view").click(function () {
@@ -160,6 +221,16 @@ $(document).ready(function () {
 
     });
 
+
+    $("button.ar").click(function () {
+        $("button.ar").removeClass("on");
+        $(this).addClass("on");
+
+        $(".list-gallery li div.ar").removeClass("open");
+        $(this).parent().find("div.ar").addClass("open");
+    });
+
+
     $(".map-pop p.img").each(function () {
         $(this).css(
             "background",
@@ -174,9 +245,20 @@ $(document).ready(function () {
         );
     });
 
+    $('.check-all').on('click', function() {
+        $("input:checkbox").prop("checked", "checked");
 
+        $('.check-all').css("display", "none");
+        $('.check-all-cancle').css("display", "inline-block");
+      });
+    
 
+      $('.check-all-cancle').on('click', function() {
+        $("input:checkbox").removeProp("checked");
 
+        $('.check-all').removeAttr("style");
+        $('.check-all-cancle').removeAttr("style");
+      });
 
     $('.tabs a').on('click', function() {
         var tab = $(this).attr("data");
@@ -192,11 +274,13 @@ $(document).ready(function () {
   if ($starRate.length > 0) $starRate.on('click', 'a', function() {
     var starValue = $(this).attr("data");
     $starRate.find('a').each(function() {
+        $(this).find("i").removeClass("icon-star");
+      $(this).find("i").addClass("icon-star-empty");
 
-      $(this).find("i").removeClass("on");
       if ($(this).attr("data") <= starValue) {
 
-        $(this).find("i").addClass("on");
+        $(this).find("i").removeClass("icon-star-empty");
+        $(this).find("i").addClass("icon-star");
       }
 
     });
