@@ -216,15 +216,26 @@
 
         &.jump,
         &.move {
-
             .zero;
-
             i {
                 .rem(font-size, 10);
                 @media all and (min-width: 1200px) {
                     font-size: 14px;
                 }
 
+            }
+        }
+
+        &.jump {
+            width:auto;
+            background:#efefef;
+
+            .rem(padding, 0 10);
+            i {
+                &::before {
+                    .mapazero;
+                    width:auto;
+                }
             }
         }
     }
@@ -2287,6 +2298,106 @@ body {
 
                 }
 
+            }
+
+            section.indicator {
+                @media all and (max-width: 1199px) {
+                    .none;
+                }
+                .center; 
+                border-bottom:1px solid #ccc;
+
+                .container {
+
+                    ul.sub {
+                        list-style:none;
+                        .mapazero;
+                        .zero;
+
+                        &>li {
+                            .inline-block;
+                            .relative;
+
+                            .top;
+                            a.home {
+                                .block;
+                                font-size:14px;
+                                height:46px;
+                                    .zero;
+                                    border-left:1px solid #ccc;
+                                    border-right:1px solid #ccc;
+                                    width:46px;
+                                    .center;
+
+                                    i {
+                                        font-size:18px;
+                                        &::before {
+                                            
+                                            .relative;
+                                            top:14px;
+                                        }
+                                    }
+
+                                
+                            }
+
+                            label {
+                                .block;
+                                font-size:16px;
+                                height:46px;
+                                padding:16px 10px 0 10px;
+                                border-right:1px solid #ccc;
+                                min-width:170px;
+
+                                i {
+                                    .absolute;
+                                    right:10px;
+                                    color:#999;
+                                }
+                            }
+
+                            input {
+                                .none;
+                            }
+
+
+                            div.sub-menu {
+                                .none;
+                                .absolute;
+                                left:-1px;
+                                top:46px;
+                                width:171px;
+                                background:@white;
+                                border:1px solid #bbb;
+                                z-index:400;
+                                padding:20px 20px 10px;
+
+                                ul {
+                                    list-style:none;
+                                    .mapazero;
+
+                                    li {
+                                        a {
+                                            .block;
+                                            font-size:16px;
+                                            color:#555;
+                                        }
+                                        padding-bottom:10px;
+                                    }
+                                }
+                            }
+                            input:checked + label {
+                                background:#efefef;
+                            }
+                            input:checked + label + div {
+                                .block;
+                                font-size:20px;
+                            }
+                        }
+
+                        
+                    }
+                }
             }
 
             /* contents header */
