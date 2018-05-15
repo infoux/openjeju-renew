@@ -2,6 +2,21 @@ $(document).ready(function () {
 
     function viewMode() {
         var windowWidth = $(window).width();
+
+
+
+        $('.issue .weather ul').slick({
+            autoplay:true,
+            speed: 1000,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            vertical:true,
+            arrows:false
+        });
+    
+
+
         if (windowWidth < 1199) {
             $("body").removeClass("pc");
             $("body").addClass("mobile");
@@ -103,6 +118,8 @@ $(document).ready(function () {
         viewMode();
     });
 
+
+
     $(".menuToggle").click(function () {
         $("#header nav").addClass("open");
         $("body").addClass("menuon");
@@ -191,18 +208,28 @@ $(document).ready(function () {
 
 
     $(".plan-map .list dt button").click(function () {
-        $(".plan-map div.search").toggleClass("on");
+        $(".plan-map div.search").addClass("on");
+        $(".plan-map div.weather").removeClass("on");
 
     });
 
+
+    $(".plan-map .list h3").click(function () {
+        $(".plan-map div.weather").addClass("on");
+        $(".plan-map div.search").removeClass("on");
+
+    });
 
 
     $(".plan-map div.search h3 button").click(function () {
-        $(".plan-map div.search").toggleClass("on");
-
+        $(".plan-map div.search").removeClass("on");
     });
 
 
+
+    $(".plan-map div.weather h3 button").click(function () {
+        $(".plan-map div.weather").removeClass("on");
+    });
 
 
     $("div.keyword button.title").click(function () {

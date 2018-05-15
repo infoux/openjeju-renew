@@ -483,9 +483,83 @@ body {
         }
     }
 
+    section.alert {
+        .center;
+        background:#1e1f1a;
+        color:@white;
+        
+
+        font-family: sans-serif;
+
+
+        .container {
+            word-break:keep-all;
+            .rem(font-size, 15);
+            .normal;
+            .relative;
+            .rem(padding, 25 40 25 70);
+
+            @media all and (min-width: 1200px) {
+                font-size:20px;
+                padding:30px 60px 30px 80px;
+            }
+
+            h2 {
+                .block;
+                .absolute;
+                .rem(width, 50);
+                .rem(height, 50);
+                .zero;
+                .rem(left, 10);
+                .rem(top, 20);
+                background:url("../images/icon-attention.svg") no-repeat center / 100% 100%;
+
+                @media all and (min-width: 1200px) {
+                    left:10px;
+                    top:24px; 
+                }
+            }
+
+            p.text {
+                .mapazero;
+                .normal;
+            }
+
+            p.info {
+                .rem(font-size, 12);
+                .rem(margin, 5 0 0);
+                .normal;
+                color:#ccc;
+                
+                @media all and (min-width: 1200px) {
+                    font-size:14px;
+                }
+            }
+
+            button.close {
+                .absolute;
+                .rem(right, 10);
+                .rem(top, 10);
+                background:rgba(255, 255, 255, 0.1);
+                border:1px solid #666;
+                color:#999;
+                .rem(font-size, 10);
+                .rem(padding, 5);
+                
+                @media all and (min-width: 1200px) {
+                    right:0;
+                    font-size:14px;
+                }
+
+            }
+
+        }
+    }
+
+
     /* header */
     header {
-        .absolute;
+        .relative;
         left: 0;
         right: 0;
         top: 0;
@@ -1095,7 +1169,7 @@ body {
 
         /* MAIN */
         section.issue {
-
+            .rem(margin-top, -50);
             .rem(padding, 50 0 0);
             height: 100vh;
             .center;
@@ -1103,6 +1177,8 @@ body {
             @media all and (min-width: 1200px) {
                 padding: 138px 0 0;
                 height: 626px;
+                
+                margin-top:-138px;
             }
 
             img {
@@ -1120,7 +1196,7 @@ body {
                         .rem(height, 99);
                         background: url("../images/txt-issue.svg") no-repeat center / 100% 100%;
                         .zero;
-                        .rem(margin, 50 auto 14);
+                        .rem(margin, 90 auto 14);
 
                         @media all and (min-width: 1200px) {
                             width: 284px;
@@ -1313,6 +1389,100 @@ body {
 
                         }
                     }
+                }
+
+                .weather {
+                    .absolute;
+                    left:0;
+                    right:0;
+                    .rem(top, 10);
+                    color:@white;
+                    
+                    @media all and (min-width: 1200px) {
+                        left:0;
+                        top:10px;
+                        right:auto;
+                    }
+
+                    ul {
+                        .inline-block;
+                        .no-list;
+                        .mapazero;
+                        .hidden;
+                        .rem(height, 60);
+                    
+                        @media all and (min-width: 1200px) {
+                            height:100px;
+                        }
+
+                        li {
+                            
+                            .relative;
+                            .rem(padding, 10 0 0 42);
+                            .left;
+                            font-family: sans-serif;
+                    
+                            @media all and (min-width: 1200px) {
+                                padding:20px 0 0 80px;
+                            }
+
+                            i {
+                                .rem(font-size, 40);
+                                .absolute;
+                                left:0;
+                                top:0;
+
+                                @media all and (min-width: 1200px) {
+                                    font-size:80px;
+                                }
+
+
+                                &::before {
+                                    .mapazero;
+                                }
+                            }
+
+                            h5 {
+                                .mapazero;
+                                .normal;
+                                word-break:keep-all;
+                                .rem(font-size, 14);
+
+                                
+                                @media all and (min-width: 1200px) {
+                                    font-size:28px;
+                                }
+
+                                small {
+                                    .block;
+                                    .rem(font-size, 25);
+                                
+                                    @media all and (min-width: 1200px) {
+                                        font-size:40px;
+                                    }
+                                }
+                            }
+
+                            p {
+                                .mapazero;
+                                .absolute;
+                                .rem(left, 0);
+                                .rem(top, 38);
+                                .rem(width, 40);
+                                .center;
+                                .rem(font-size, 9);
+
+                                @media all and (min-width: 1200px) {
+                                    top:74px;
+                                    width:80px;
+                                    font-size:14px;
+                                }
+                            }
+                        }
+                    }
+
+
+                    
                 }
 
                 & > i {
@@ -1527,37 +1697,145 @@ body {
                         }
 
                         p.info {
-                            .none;
 
-                            @media all and (min-width: 1200px) {
                                 .block;
                                 .absolute;
                                 z-index: 10;
-                                border-radius: 50%;
                                 margin: 0;
-                                left: -22px;
-                                top: -22px;
-                                font-size: 14px;
-                                padding-top: 36px;
-                                background: #fc9317;
-                                width: 148px;
-                                height: 148px;
-                                font-size: 16px;
-                                color: @white;
+                                .rem(width, 100);
+                                .rem(height, 84.5);
+                                .rem(font-size, 9);
+                                font-style:italic;
+                                line-height:1.4;
+
+                                @media all and (min-width: 1200px) {
+                                    width:240px;
+                                    height:162px;
+                                    font-size:20px;
+                                    line-height:1.2;
+                                }
 
                                 span {
                                     .block;
-
                                     strong {
                                         .block;
-                                        .normal;
-                                        font-size: 30px;
-                                        margin-top: 5px;
-
                                     }
                                 }
 
-                            }
+                                &.food-weather01 {
+                                    background:url("../images/food-weather01.svg") no-repeat center / 100% 100%;
+                                    .rem(left, -20);
+                                    .rem(top, 28);
+                                    .rem(padding, 26 0 0);
+                                    color:#403400;
+
+                                    @media all and (min-width: 1200px) {
+                                        left:-80px;
+                                        top:-40px;
+                                        padding:42px 0 0;
+                                    }
+
+                                }
+
+                                &.food-weather02 {
+                                    background:url("../images/food-weather02.svg") no-repeat center / 100% 100%;
+                                    .rem(left, -20);
+                                    .rem(top, 28);
+                                    .rem(padding, 26 0 0 4);
+                                    color:#403400;
+
+                                    @media all and (min-width: 1200px) {
+                                        left:-80px;
+                                        top:-40px;
+                                        padding:42px 0 0 10px;
+                                    }
+
+                                }
+
+                                &.food-weather03 {
+                                    background:url("../images/food-weather03.svg") no-repeat center / 100% 100%;
+                                    .rem(left, -10);
+                                    .rem(top, 30);
+                                    .rem(padding, 30 0 0 0);
+                                    color:#04344e;
+
+                                    @media all and (min-width: 1200px) {
+                                        left:-80px;
+                                        top:-50px;
+                                        padding:52px 0 0;
+                                    }
+                                }
+                                
+                                &.food-weather04 {
+                                    background:url("../images/food-weather04.svg") no-repeat center / 100% 100%;
+                                    .rem(left, -10);
+                                    .rem(top, 30);
+                                    .rem(padding, 30 0 0 3);
+                                    color:#04344e;
+
+                                    @media all and (min-width: 1200px) {
+                                        left:-80px;
+                                        top:-50px;
+                                        padding:58px 0 0;
+                                    }
+                                }
+
+                                &.food-weather05 {
+                                    background:url("../images/food-weather05.svg") no-repeat center / 100% 100%;
+                                    .rem(left, -10);
+                                    .rem(top, 30);
+                                    .rem(padding, 26 0 0 3);
+                                    color:@white;
+
+                                    @media all and (min-width: 1200px) {
+                                        left:-80px;
+                                        top:-44px;
+                                        padding:46px 0 0;
+                                    }
+                                }
+
+                                &.food-weather06 {
+                                    background:url("../images/food-weather06.svg") no-repeat center / 100% 100%;
+                                    .rem(left, -10);
+                                    .rem(top, 30);
+                                    .rem(padding, 24 0 0 0);
+                                    color:#04344e;
+                                    
+                                    @media all and (min-width: 1200px) {
+                                        left:-80px;
+                                        top:-44px;
+                                        padding:46px 0 0;
+                                    }
+                                }
+
+                                &.food-weather07 {
+                                    background:url("../images/food-weather07.svg") no-repeat center / 100% 100%;
+                                    .rem(left, -10);
+                                    .rem(top, 30);
+                                    .rem(padding, 24 0 0 0);
+                                    color:#04344e;
+                                    
+                                    @media all and (min-width: 1200px) {
+                                        left:-80px;
+                                        top:-44px;
+                                        padding:46px 0 0;
+                                    }
+                                }
+
+                                &.food-weather08 {
+                                    background:url("../images/food-weather08.svg") no-repeat center / 100% 100%;
+                                    .rem(left, -10);
+                                    .rem(top, 30);
+                                    .rem(padding, 34 0 0 4);
+                                    color:#04344e;
+                                    
+                                    @media all and (min-width: 1200px) {
+                                        left:-60px;
+                                        top:-28px;
+                                        padding:64px 0 0 10px;
+                                    }
+                                }
+
 
                         }
                     }
@@ -1867,10 +2145,12 @@ body {
                 .rem(padding, 50 0 0);
                 .rem(height, 225);
                 .center;
+                .rem(margin-top, -50);
 
                 @media all and (min-width: 1200px) {
                     padding: 138px 0 0;
                     height: 420px;
+                    margin-top:-138px;
                 }
 
                 img {
@@ -2447,11 +2727,13 @@ body {
         section.sub-head-search {
             .rem(padding, 50 0 0);
             .rem(height, 304);
+            .rem(margin-top, -50);
             .center;
 
             @media all and (min-width: 1200px) {
                 padding: 138px 0 0;
                 height: 420px;
+                margin-top:-138px;
             }
 
             img {
@@ -7248,6 +7530,44 @@ body {
             }
         }
 
+        section.chart-tab {
+            .container {
+                .rem(margin, 20 0);
+                .zero;
+
+                @media all and (min-width: 1200px) {
+                    border-bottom:1px solid #0b75bb;
+                    margin:40px 0 20px;
+
+                }
+
+                a {
+                    .inline-block;
+                    width:50%;
+                    .rem(line-height, 27);
+                    .rem(font-size, 12);
+                    .center;
+                    background:#e5e5e5;
+                    color:#555;
+                    border-bottom:1px solid #0b75bb;
+
+                    @media all and (min-width: 1200px) {
+                        font-size:18px;
+                        line-height:40px;
+                        border:none;
+                        width:200px;
+                    }
+    
+
+                    &.on {
+                        background:#0b75bb;
+                        color:@white;
+                    }
+                }
+            }
+
+        }
+
         section.chart {
             .center;
             .container {
@@ -7256,9 +7576,8 @@ body {
                 fieldset {
                     .rem(padding-bottom, 10);
                     .rem(margin-bottom, 10);
-                    border:1px solid #bebebe;
-                    border-left:none;
-                    border-right:none;
+                    border:none;
+                    border-bottom:1px solid #bebebe;
 
 
                     dl {
@@ -7893,6 +8212,193 @@ body {
                         }
                     }
 
+
+                    div.weather {
+                        .none;
+                        .absolute;
+                        font-family: sans-serif;
+                        
+                        left:0;
+                        right:0;
+                        bottom:0;
+                        .rem(top, -146);
+                        z-index:1400;
+                        background:rgba(0,0,0,0.8);
+                        .rem(padding, 35);
+
+                        &.on {
+                            .block;
+                        }
+
+                        h3 {
+                            background:#0867a8;
+                            margin:0;
+                            .center;
+                            .normal;
+                            .rem(font-size, 15);
+                            .rem(padding, 15 0);
+                            .rem(height, 80);
+                            color:@white;
+                            .relative;
+                            .hidden;
+                            line-height:1.6;
+                            border-bottom:1px solid #065185;
+
+                            small {
+                                .block;
+                                
+                            }
+
+                            strong {
+                                .rem(font-size, 19);
+                                .normal;
+                            }
+
+                            button {
+                                .absolute;
+                                right:0;
+                                top:0;
+                                border:none;
+                                background:none;
+                                .rem(padding, 0 8);
+                                .rem(line-height, 36);
+                                .zero;
+                                color:@white;
+
+                                i {
+                                    .rem(font-size, 22);
+
+                                    &::before {
+                                        .mapazero;
+                                        transform: rotate(45deg);
+                                    }
+
+                                }
+
+
+                            }
+
+                        }
+
+                        .weather-info {
+                            .block;
+                            .rem(height, 80);
+                            .rem(line-height, 80);
+                            background:#0b75bb;
+                            color:@white;
+                            .center;
+                            border-top:1px solid #3c8dc6;
+                            
+
+                            i {
+                                .rem(font-size, 46);
+                                color:#ffde00;
+                                .inline-block;
+                                .top;
+
+                                &::before {
+                                    .mapazero;
+                                }
+                            }
+
+                            h4 {
+                                .inline-block;
+                                .rem(margin, 0 4);
+                                .top;
+                                .rem(font-size, 35);
+                                .normal;
+                            }
+
+                            p {
+                                .inline-block;
+                                .mapazero;
+                                .top;
+                                .rem(font-size, 12);
+                            }
+                        }
+
+                        &>h4 {
+                            .normal;
+                            .rem(font-size, 14);
+                            margin:0;
+                            background:#e9e9ea;
+                            .rem(padding, 10);
+                        }
+
+                        ul {
+                            background:#e9e9ea;
+                            margin:0;
+                            .rem(padding, 0 10 10);
+                            .zero;
+
+                            li {
+                                .relative;
+                                background:@white;
+                                .drop-shadow();
+                                .rem(margin-bottom, 6);
+                                .rem(padding, 5 5 5 100);
+                                .rem(min-height, 90);
+
+                                p.image {
+                                    .mapazero;
+                                    .absolute;
+                                    .rem(left, 5);
+                                    .rem(top, 5);
+                                    .rem(width, 79);
+                                    .rem(height, 79);
+                                    .hidden;
+
+                                    img {
+                                        min-width:100%;
+                                        max-width:140%;
+                                        min-height:100%;
+                                        max-height:140%;
+
+                                    }
+                                }
+
+                                h5 {
+                                    .rem(font-size, 12);
+                                    .rem(margin, 6 0 0);
+
+                                    button {
+
+                                        border:none;
+                                        background:none;
+                                        .zero;
+                                        .mapazero;
+                                        
+
+                                        i {
+                                            .rem(font-size, 14);
+
+                                            &::before {
+                                                .mapazero;
+                                            }
+                                        }
+
+
+                                    }
+                                }
+
+                                p.location {
+                                    color:#555;
+                                    .rem(font-size, 9);
+                                    .rem(margin, 4 0 10);
+                                }
+
+                                button.add {
+                                    .block;
+                                    width:100%;
+                                    border:1px solid @main;
+                                    color:@main;
+                                    .rem(border-radius, 3);
+                                    .rem(line-height, 20);
+                                    .rem(font-size, 10);
+                                }
+                            }
+                        }
+                    }
                 }
 
 //PC
@@ -8020,6 +8526,7 @@ body {
 
                                             h3 {
                                                 .mapazero;
+                                                .inline-block;
                                                 color:@main;
                                                 .normal;
                                                 font-size:16px;
@@ -8214,6 +8721,197 @@ body {
                             padding:0 15px 15px;
                             .zero;
                             height:495px;
+                            overflow-y:scroll;
+
+                            li {
+                                .relative;
+                                background:@white;
+                                .drop-shadow();
+                                margin-bottom:10px;
+                                padding:8px 8px 8px 120px;
+                                min-height:116px;
+
+                                p.image {
+                                    .mapazero;
+                                    .absolute;
+                                    left:8px;
+                                    top:8px;
+                                    width:100px;
+                                    height:100px;
+                                    .hidden;
+
+                                    img {
+                                        min-width:100%;
+                                        max-width:140%;
+                                        min-height:100%;
+                                        max-height:140%;
+
+                                    }
+                                }
+
+                                h4 {
+                                    font-size:16px;
+                                    margin:6px 0 0;
+
+                                    button {
+
+                                        border:none;
+                                        background:none;
+                                        .zero;
+                                        .mapazero;
+                                        
+
+                                        i {
+                                            font-size:16px;
+
+                                            &::before {
+                                                .mapazero;
+                                            }
+                                        }
+
+
+                                    }
+                                }
+
+                                p.location {
+                                    color:#555;
+                                    font-size:12px;
+                                    margin:6px 0 16px;
+                                }
+
+                                button.add {
+                                    .block;
+                                    width:100%;
+                                    border:1px solid @main;
+                                    color:@main;
+
+                                    line-height:25px;
+                                    border-radius:4px;
+                                    font-size:13px;
+                                }
+                            }
+                        }
+                    }
+
+
+
+
+                    div.weather {
+                        .none;
+                        .absolute;
+                        right:376px;
+                        height:600px;
+                        top:15px;
+                        width:378px;
+                        z-index:1400;
+                        background:rgba(0,0,0,0.8);
+                        font-family: sans-serif;
+
+                        &.on {
+                            .block;
+                        }
+                        h3 {
+                            background:#0867a8;
+                            margin:0;
+                            .center;
+                            .normal;
+                            font-size:19px;
+                            padding:13px 0 0;
+                            height:80px;
+                            color:@white;
+                            .relative;
+                            .hidden;
+                            line-height:1.6;
+                            border-bottom:1px solid #065185;
+
+                            small {
+                                .block;
+                                
+                            }
+
+                            strong {
+                                font-size:24px;
+                                .normal;
+                            }
+
+
+                            button {
+                                .absolute;
+                                right:0;
+                                top:0;
+                                border:none;
+                                background:none;
+                                padding:0 8px;
+                                line-height:46px;
+                                .zero;
+                                color:@white;
+
+                                i {
+                                    font-size:26px;
+
+                                    &::before {
+                                        .mapazero;
+                                        transform: rotate(45deg);
+                                    }
+
+                                }
+
+
+                            }
+
+                        }
+
+                        .weather-info {
+                            .block;
+                            height:80px;
+                            line-height:80px;
+                            background:#0b75bb;
+                            color:@white;
+                            .center;
+                            border-top:1px solid #3c8dc6;
+
+                            i {
+                                font-size:50px;
+                                color:#ffde00;
+                                .inline-block;
+                                .top;
+
+                                &::before {
+                                    .mapazero;
+                                }
+                            }
+
+                            h4 {
+                                .inline-block;
+                                margin:0 4px;
+                                .top;
+                                font-size:34px;
+                                .normal;
+                            }
+
+                            p {
+                                .inline-block;
+                                .mapazero;
+                                .top;
+                                font-size:16px;
+                            }
+                        }
+
+                        &>h4 {
+                            .normal;
+                            font-size:18px;
+                            margin:0;
+                            padding:0 10px;
+                            height:40px;
+                            line-height:40px;
+                            color:@white;
+
+                        }
+                        ul {
+                            margin:0;
+                            padding:0 15px 15px;
+                            .zero;
+                            height:400px;
                             overflow-y:scroll;
 
                             li {
