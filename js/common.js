@@ -2,6 +2,7 @@ $(document).ready(function () {
 
     function viewMode() {
         var windowWidth = $(window).width();
+<<<<<<< HEAD
 
 
 
@@ -17,6 +18,8 @@ $(document).ready(function () {
     
 
 
+=======
+>>>>>>> master
         if (windowWidth < 1199) {
             $("body").removeClass("pc");
             $("body").addClass("mobile");
@@ -118,8 +121,11 @@ $(document).ready(function () {
         viewMode();
     });
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> master
     $(".menuToggle").click(function () {
         $("#header nav").addClass("open");
         $("body").addClass("menuon");
@@ -208,12 +214,17 @@ $(document).ready(function () {
 
 
     $(".plan-map .list dt button").click(function () {
+<<<<<<< HEAD
         $(".plan-map div.search").addClass("on");
         $(".plan-map div.weather").removeClass("on");
+=======
+        $(".plan-map div.search").toggleClass("on");
+>>>>>>> master
 
     });
 
 
+<<<<<<< HEAD
     $(".plan-map .list h3").click(function () {
         $(".plan-map div.weather").addClass("on");
         $(".plan-map div.search").removeClass("on");
@@ -230,6 +241,15 @@ $(document).ready(function () {
     $(".plan-map div.weather h3 button").click(function () {
         $(".plan-map div.weather").removeClass("on");
     });
+=======
+
+    $(".plan-map div.search h3 button").click(function () {
+        $(".plan-map div.search").toggleClass("on");
+
+    });
+
+
+>>>>>>> master
 
 
     $("div.keyword button.title").click(function () {
