@@ -7687,6 +7687,283 @@ body {
             }
         }
 
+        section.weather-data {
+            .center;
+            .container {
+                .zero;
+
+                @media all and (min-width: 1200px) {
+                   margin:30px 0 20px;
+                  }
+
+
+                dl {
+                    .inline-block;
+                    width:100%;
+                    .rem(margin, 0 0 10);
+                    border:1px solid #f2f2f2;
+                    .drop-shadow();
+
+                    
+                    @media all and (min-width: 1200px) {
+                        width:calc(~"(100% - 30px) / 2");
+                        margin:0 0 30px;
+                        .relative;
+
+                        &:nth-child(odd) {
+                            margin-right:30px;
+                        }
+                        
+                      }
+
+
+
+
+
+                    dt {
+                        .rem(padding, 10);
+                        background:url("../images/weather-dt.gif") no-repeat left bottom;
+                    
+                        @media all and (min-width: 1200px) {
+                            .absolute;
+                            left:0;
+                            top:0;
+                            bottom:0;
+                            width:250px;
+                            padding:40px 0 0;
+                            .center;
+                            
+                            background:url("../images/weather-dt-pc.gif") no-repeat right top;
+                        }
+
+
+
+                        &.weather01 {
+                            color:#e17b0d;
+                        }
+
+                        &.weather02 {
+                            color:#b0772e;
+                        }
+                        
+
+                        &.weather03 {
+                            color:#6979bf;
+                        }
+
+                        &.weather04 {
+                            color:#658386;
+                        }
+
+                        &.weather05 {
+                            color:#07395b;
+                        }
+
+                        &.weather06 {
+                            color:#386eb1;
+                        }
+
+                        &.weather07 {
+                            color:#386eb1;
+                        }
+
+                        &.weather08 {
+                            color:#6e7f94;
+                        }
+
+
+
+                        i {
+                            .rem(font-size, 48);
+
+                            @media all and (min-width: 1200px) {
+                                .block;
+                                font-size:84px;
+                            }
+    
+
+                            &::before {
+                                margin:0;
+                            }
+                        }
+                        h2 {
+                            .inline-block;
+                            .normal;
+                            .top;
+                            .rem(font-size, 17);
+
+                            @media all and (min-width: 1200px) {
+                                font-size:35px;
+                                .mapazero;
+                            }
+    
+                            u {
+                                text-decoration:none;
+                                color:#555;
+
+                                @media all and (min-width: 1200px) {
+                                    .block;
+                                }
+                            }
+                        }
+                    }
+
+                    dd {
+                        margin:0;
+                        .rem(padding, 10 20 20);
+
+                        @media all and (min-width: 1200px) {
+                            padding:20px 30px 20px 0;
+                        }
+
+                        ul {
+                            .relative;
+                            .no-list;
+                            .rem(padding, 0);
+                            padding-left:50%;
+                            .rem(min-height, 100);
+                   
+                            @media all and (min-width: 1200px) {
+                                padding-left:270px;
+                            }
+    
+
+                            
+                            li {
+
+                                
+                                .rem(font-size, 10);
+                                .rem(padding, 0 0 0 10);
+                                .rem(line-height, 28);
+                    
+                                @media all and (min-width: 1200px) {
+                                    padding:0 10px;
+                                    line-height:44px;
+                                    font-size:16px;
+                                 }
+
+                                h3 {
+                                    .normal;
+                                    .mapazero;
+                                    .rem(font-size, 10);
+                                    @media all and (min-width: 1200px) {
+                                        font-size:16px;
+                                     }
+                                }
+
+                                strong {
+                                    .inline-block;
+                                    .rem(width, 15);
+                                    .rem(height, 15);
+                                    .rem(line-height, 15);
+                                    .rem(margin, 0 4 0 0);
+                                    .center;
+                                    .rem(border-radius, 3);
+                                    border:1px solid #ccc;
+                                    .normal;
+
+                                    
+                                    @media all and (min-width: 1200px) {
+                                        width:30px;
+                                        height:30px;
+                                        line-height:30px;
+                                        margin:0 10px 0 0;
+                                     }
+                                }
+
+                                &.first {
+                                    .absolute;
+                                    left:0;
+                                    top:0;
+                                    width:50%;
+                                    .rem(padding, 0 10 0 0);
+                                    border-right:1px solid #eee;
+                    
+                                    @media all and (min-width: 1200px) {
+                                       .static;
+                                       border:none;
+                                       width:100%;
+                                       padding:0;
+                                    }
+            
+
+                                    p.image {
+                                        .mapazero;
+                                        .rem(height, 80);
+                                        .hidden;
+                                        .rem(border-radius, 6);
+                    
+                                        @media all and (min-width: 1200px) {
+                                            height:160px;
+                                         }
+
+                                        img {
+                                            min-width:100%;
+                                            max-width:150%;
+                                            min-height:100%;
+
+                                        }
+                                    }
+
+                                    h3 {
+                                        .relative;
+                                        .rem(font-size, 10);
+                                        .rem(padding, 10 0 0 24);
+                                        line-height:1.4;
+                                        .normal;
+
+                                        @media all and (min-width: 1200px) {
+                                            padding:20px 0 20px 52px;
+                                            margin:0 0 10px 0;
+                                            font-size:16px;
+                                            border-bottom:1px solid #eee;
+                                         }
+
+                                        small {
+                                            .block;
+                                            .rem(font-size, 9);
+                                            color:#555;
+                                            .ellipse;
+
+                                            @media all and (min-width: 1200px) {
+                                                font-size:12px;
+                                             }
+                                        }
+
+                                        strong {
+                                            .block;
+                                            .absolute;
+                                            left:0;
+                                            .rem(top, 10);
+                                            .rem(width, 20);
+                                            .rem(height, 20);
+                                            .rem(line-height, 20);
+                                            .center;
+                                            .rem(border-radius, 3);
+                                            border:none;
+                                            background:#0b75bb;
+                                            color:@white;
+
+                                            @media all and (min-width: 1200px) {
+                                                top:20px;
+                                                width:42px;
+                                                height:42px;
+                                                line-height:42px;
+                                             }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+
+
+            }
+        }
+
 
         section.write-plan01 {
             .center;
