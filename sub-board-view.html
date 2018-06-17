@@ -1,283 +1,461 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>openjeju</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
-        <!-- <link href="css/style.css" rel="stylesheet"> -->
-        <!-- javaScript -->
-        <script src="js/jquery-1.11.3.min.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>openjeju</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <!-- javaScript -->
+    <script src="js/jquery-1.11.3.min.js"></script>
 
-        <!-- Slider Javascript file -->
-        <script src="js/slick.min.js"></script>
-        <script src="js/perfect-scrollbar.jquery.js"></script>
+    <!-- Slider Javascript file -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/perfect-scrollbar.jquery.js"></script>
 
-        <script src="js/common.js"></script>
-    </head>
+    <script src="js/common.js"></script>
+</head>
 
-    <body>
-        <!-- S:skip_navi -->
-        <div class="skip_navi">
-            <a class="sr-only sr-only-focusable" href="#content">본문 바로가기</a>
-            <a class="sr-only sr-only-focusable" href="#footer">푸터 바로가기</a>
-        </div>
-        <!-- E:skip_navi -->
+<body>
+    <!-- S:skip_navi -->
+    <div class="skip_navi">
+        <a class="sr-only sr-only-focusable" href="#content">본문 바로가기</a>
+        <a class="sr-only sr-only-focusable" href="#footer">푸터 바로가기</a>
+    </div>
+    <!-- E:skip_navi -->
 
-        <!-- S:header -->
-        <header id="header" class="no-issue">
-            <div class="container">
-                <button class="menuToggle">
+    <!-- S:header -->
+    <header id="header" class="no-issue">
+        <div class="container">
+            <button class="menuToggle">
                     <i class="icon-menu" aria-hidden="true"></i>토글</button>
 
-                <ul class="util_menu">
-                    <li>
-                        <a href="">
+            <ul class="util_menu">
+                <li>
+                    <a href="">
                             회원가입
                         </a>
-                    </li>
-                    <li>
-                        <a href="">
+                </li>
+                <li>
+                    <a href="">
                             로그인
                         </a>
-                    </li>
-                    <li>
-                        <a href="">
+                </li>
+                <li>
+                    <a href="">
                             마이페이지
                         </a>
-                    </li>
-                    <li>
-                        <a href="">
+                </li>
+                <li>
+                    <a href="">
                             고객센터
                         </a>
-                    </li>
-                </ul>
+                </li>
+            </ul>
 
-                <h1>
-                    <a href="">Logo</a>
-                </h1>
+            <h1>
+                <a href="">Logo</a>
+            </h1>
 
-                <ul class="links">
-                    <li>
-                        <a href="">
+            <ul class="links">
+                <li>
+                    <a href="">
                             관광지순위
                         </a>
-                    </li>
-                    <li>
-                        <a class="active" href="">
+                </li>
+                <li>
+                    <a class="active" href="">
                             여행일정만들기
                         </a>
+                </li>
+            </ul>
+
+        </div>
+        <nav id="main_menu">
+            <div class="container">
+
+                <div class="gnb">
+                    <p class="img"><img src="images/img-user.png" alt="사용자 이미지"></p>
+                    <a class="login" href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                    <a href="#">고객센터</a>
+                </div>
+
+                <ul class="menu">
+                    <li>
+                        <h2>
+                            <a href="">테마여행</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                <a class="on" href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <h2>
+                            <a href="">고팡TV</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <h2>
+                            <a href="">추천여행일정</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>
+                            <a href="">맛 IN JEJU</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>
+                            <a href="">지역정보</a>
+                        </h2>
+
+                    </li>
+                    <li>
+                        <h2>
+                            <a href="">여행Tip</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>2뎁스 메뉴</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="live">
+                        <h2>고팡 ON AIR</h2>
+                        <span>방송중 입니다!</span>
+                        <a href="">시청하러가기</a>
+                        <div class="customer"></div>
                     </li>
                 </ul>
 
             </div>
-            <nav id="main_menu">
-                <div class="container">
 
-                    <div class="gnb">
-                        <p class="img"><img src="images/img-user.png" alt="사용자 이미지"></p>
-                        <a class="login" href="#">로그인</a>
-                        <a href="#">회원가입</a>
-                        <a href="#">고객센터</a>
-                    </div>
+            <button class="close">창닫기</button>
+        </nav>
+    </header>
+    <!-- E:header -->
 
-                    <ul class="menu">
-                        <li>
-                            <h2>
-                                <a href="">테마여행</a>
-                            </h2>
-                            <ul>
-                                <li>
-                                    <a class="on" href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                            </ul>
+    <!-- S:content -->
+    <div id="content" class="sub">
 
-                        </li>
-                        <li>
-                            <h2>
-                                <a href="">고팡TV</a>
-                            </h2>
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                            </ul>
+        <section class="content-head">
+            <div class="container">
+                <h2>공지사항</h2>
+            </div>
+        </section>
 
-                        </li>
-                        <li>
-                            <h2>
-                                <a href="">추천여행일정</a>
-                            </h2>
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h2>
-                                <a href="">맛 IN JEJU</a>
-                            </h2>
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h2>
-                                <a href="">지역정보</a>
-                            </h2>
+        <section class="search">
+            <div class="container">
+                <input type="text">
+                <button><i class="icon-search"></i></button>
+            </div>
+        </section>
 
-                        </li>
-                        <li>
-                            <h2>
-                                <a href="">여행Tip</a>
-                            </h2>
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>2뎁스 메뉴</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="live">
-                            <h2>고팡 ON AIR</h2>
-                            <span>방송중 입니다!</span>
-                            <a href="">시청하러가기</a>
-                            <div class="customer"></div>
-                        </li>
-                    </ul>
+        <section class="view-board">
+            <div class="container">
 
-                </div>
-
-                <button class="close">창닫기</button>
-            </nav>
-        </header>
-        <!-- E:header -->
-
-        <!-- S:content -->
-        <div id="content" class="sub">
-
-            <section class="content-head">
-                <div class="container">
-                    <h2>공지사항</h2>
-                </div>
-            </section>
-
-            <section class="view-board">
-                <div class="container">
-
-                    <div class="board-head">
-                        <h3>제주여행, 간직하고 싶은 추억의 사진 스토리 공모</h3>
-                        <i>작성일 :
+                <div class="board-head">
+                    <h3>제주여행, 간직하고 싶은 추억의 사진 스토리 공모</h3>
+                    <i>작성일 :
                             <strong>2017년 07월 12일</strong>
                         </i>
-                        <i>조회수 :
+                    <i>조회수 :
                             <strong>34</strong>
                         </i>
-                    </div>
-                    <div class="text">
-                        응모기간: 2016년 6월 27일 ~ 7월 20일 많은 참여 부탁드립니다.<br>
+                </div>
+                <div class="text">
+                    응모기간: 2016년 6월 27일 ~ 7월 20일 많은 참여 부탁드립니다.<br>
 
-                    </div>
+                </div>
 
-                    <ul class="file">
-                        <li>
-                            <a href="">
-                                <i class="icon-floppy" aria-hidden="true"></i>event.png (905 kb)</a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="icon-floppy" aria-hidden="true"></i>event2.png (905 kb)</a>
-                        </li>
-                    </ul>
+                <ul class="file">
+                    <li>
+                        <a href="">
+                            <i class="icon-floppy" aria-hidden="true"></i>event.png (905 kb)</a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon-floppy" aria-hidden="true"></i>event2.png (905 kb)</a>
+                    </li>
+                </ul>
 
-                    <div class="btn-area">
+                <!-- <div class="btn-area">
                         <a class="" href="">수정</a>
                         <a class="" href="">삭제</a>
                         <a class="" href="">리스트</a>
-                    </div>
-
-                </div>
-            </section>
-
-        </div>
-        <!-- E:content -->
-
-        <!-- S:footer -->
-        <footer id="footer">
-            <div class="footer-slogan">
-                <h2>제주여행은 OPENJEJU와 함께 하세요</h2>
+                    </div> -->
 
             </div>
-            <address>
+        </section>
+
+        <section class="review">
+            <div class="container">
+                <h3>댓글쓰기</h3>
+
+                <div class="float">
+                    <div class="review-wrap">
+                        <textarea class="review-text" placeholder="댓글을 남겨주세요."></textarea>
+                        <div class="upload-img-wrap">
+                            <div class="upload-img">
+                                <img src="images/experience03.jpg" alt="이미지 추가">
+                            </div>
+                            <div class="upload-img">
+                                <input class="input-hidden" type="file"><i class="icon-plus"></i>
+                            </div>
+                        </div>
+                        <div class="review-img">
+                            <div class="img-upload-button">
+                                <img src="images/ico_camera.svg" alt="파일업로드">
+                                <input class="input-hidden" type="file">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="submit">등록</button>
+                </div>
+
+                <div class="float basic">
+                    <div class="review-wrap">
+                        <textarea class="review-text" placeholder="댓글을 남겨주세요."></textarea>
+                        <div class="review-img">
+                            <div class="img-upload-button">
+                                <img src="images/ico_camera.svg" alt="파일업로드">
+                                <input class="input-hidden" type="file">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="submit">등록</button>
+                </div>
+
+
+
+                <ul class="review-list">
+                    <li>
+                        <div class="review-box">
+                            <div class="review-aside">
+                                <h3>닉네임
+                                    <small>2018.6.8</small>
+                                    <small>15:03</small>
+                                </h3>
+                            </div>
+                            <p>댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글<br> 댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글
+                            </p>
+                            <img class="img-area" src="images/experience03.jpg" alt="업로드 이미지">
+
+                            <div class="btn-wrap">
+                                <a href="#">답글</a>
+                                <div class="right">
+                                    <a href="#">수정</a>
+                                    <a href="#">삭제</a>
+                                    <a href="#">신고</a>
+                                </div>
+                            </div>
+
+                            <div class="big-img">
+                                <img src="images/experience03.jpg" alt="큰 이미지">
+                            </div>
+                        </div>
+
+                        <div class="reply-wrap">
+
+                            <!-- <div class="review-box">
+                                <div class="review-aside">
+                                    <h3>닉네임
+                                        <small>2018.6.8</small>
+                                        <small>15:03</small>
+                                    </h3>
+                                </div>
+                                <p>댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글<br> 댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글
+                                </p>
+                                <img class="img-area" src="images/experience03.jpg" alt="업로드 이미지">
+
+                                <div class="btn-wrap">
+                                    <a href="#">답글</a>
+                                    <div class="right">
+                                        <a href="#">수정</a>
+                                        <a href="#">삭제</a>
+                                        <a href="#">신고</a>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <img src="images/arrow.png" alt="댓글 화살표">
+                            <div class="reply-box">
+                                <div class="reply-aside">
+                                    <h3>re닉네임
+                                        <small>2018.6.8</small>
+                                        <small>15:03</small>
+                                    </h3>
+                                </div>
+                                <div class="float">
+                                    <div class="review-wrap">
+                                        <textarea class="review-text" placeholder="댓글을 남겨주세요."></textarea>
+                                        <div class="upload-img-wrap">
+                                            <div class="upload-img">
+                                                <img src="images/experience03.jpg" alt="이미지 추가">
+                                            </div>
+                                            <div class="upload-img">
+                                                <input class="input-hidden" type="file"><i class="icon-plus"></i>
+                                            </div>
+                                        </div>
+                                        <div class="review-img">
+                                            <div class="img-upload-button">
+                                                <img src="images/ico_camera.svg" alt="파일업로드">
+                                                <input class="input-hidden" type="file">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="submit">등록</button>
+                                </div>
+                            </div>
+
+                            <img src="images/arrow.png" alt="댓글 화살표">
+                            <div class="reply-box edit">
+                                <div class="reply-aside">
+                                    <h3>re닉네임</h3>
+                                </div>
+                                <div class="float basic">
+                                    <div class="review-wrap">
+                                        <textarea class="review-text" placeholder="댓글을 남겨주세요."></textarea>
+                                        <div class="upload-img-wrap">
+                                            <div class="upload-img">
+                                                <img src="images/experience03.jpg" alt="이미지 추가">
+                                                <a href="#"><img src="images/cancel.png" alt="cancel"></a>
+                                            </div>
+                                        </div>
+                                        <div class="review-img">
+                                            <div class="img-upload-button">
+                                                <img src="images/ico_camera.svg" alt="파일업로드">
+                                                <input class="input-hidden" type="file">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="submit">수정</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+
+
+                    <div class="pagenation">
+
+                        <a class="move" href="">이전<i class="icon-left-open-big" aria-hidden="true"></i>
+                                        </a>
+                        <a href="">1</a>
+                        <a href="">2</a>
+                        <strong>3</strong>
+                        <a href="">4</a>
+                        <a href="">5</a>
+                        <a class="move" href="">다음<i class="icon-right-open-big" aria-hidden="true"></i>
+                                        </a>
+                    </div>
+                </ul>
+
+                <div class="review-menu">
+                    <a href="#">목록</a>
+                    <a class="right" href="#">글쓰기</a>
+                </div>
+            </div>
+    </div>
+    </section>
+
+    </div>
+    <!-- E:content -->
+
+    <!-- S:footer -->
+    <footer id="footer">
+        <div class="footer-slogan">
+            <h2>제주여행은 OPENJEJU와 함께 하세요</h2>
+
+        </div>
+        <address>
                 <div class="container">
                     <ul class="util">
                         <li>
@@ -298,8 +476,8 @@
 
                 </div>
             </address>
-        </footer>
-        <!-- E:footer -->
-    </body>
+    </footer>
+    <!-- E:footer -->
+</body>
 
 </html>
