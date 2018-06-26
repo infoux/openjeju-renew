@@ -4048,6 +4048,133 @@ body {
                     padding-bottom: 45px;
                 }
 
+                /* lang checkbox */
+
+                div.lang-checkbox {
+                    .relative;
+                    width: 100%;
+                    .rem(height, 35);
+                    .rem(margin, 20 0);
+
+                    @media all and (min-width: 1200px) {
+                        .mapazero;
+                        height: 0;
+                    }
+
+                    div.btn-wrap {
+                        .absolute;
+                        right: 0;
+                        border: 1px solid #ccc;
+                        border-radius: 10px;
+                        .rem(height, 35);
+                        .rem(width, 110);
+                        .center;
+                        .rem(line-height, 35);
+                        .rem(font-size, 14);                    
+
+                        @media all and (min-width: 1200px) {
+                            width: 120px;
+                            height: 40px;
+                            line-height: 40px;
+                            .absolute;
+                            margin: 0;
+                            top: 55px;
+                            right: 0;
+                        }
+
+                        div.toggle-btn {    
+                            width: 100%;          
+                            height: 100%;
+
+                            #btn {
+                                display: none;
+                            }
+
+                            #btn:checked + i + ul.toggle-menu {
+                                display: block;
+                            }
+
+                            #btn:checked + i {
+                                -ms-transform: rotate(0deg); 
+                                -webkit-transform: rotate(0deg); 
+                                transform: rotate(0deg);
+                            }
+
+                            label {
+                                .pointer;
+                                .relative;
+                                z-index: 1;
+                                width: 100%;
+                                .inline-block;
+                                .rem(padding-right, 12);
+
+                                &::before {
+                                    content: "";
+                                    .inline-block;
+                                    .rem(width, 25);
+                                    .rem(height, 25);
+                                    background: url("../images/flag-ko.svg");
+                                    vertical-align: middle;
+                                    .rem(margin, 3 4 0 0);
+
+                                    @media all and (min-width: 1200px) {    
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+
+                            .icon-up-dir {
+                                .absolute;
+                                .rem(top, 10);
+                                .rem(right, 10);
+                                line-height: 1;
+                                .rem(font-size, 12);
+                                .inline-block;
+                                color: #ccc;
+                                -ms-transform: rotate(180deg); 
+                                -webkit-transform: rotate(180deg); 
+                                transform: rotate(180deg);
+
+                                @media all and (min-width: 1200px) {
+                                    top: 11.5px;
+                                    right: 15px;
+                                }
+                                
+                                &::before {
+                                    margin: 0;
+                                }                                     
+                            }
+
+                            ul.toggle-menu {
+                                .no-list;
+                                background: #f0f0f0;
+                                border-radius: 4px;
+                                .mapazero; 
+                                display: none;
+
+                                li {
+                                    font-family: sans-serif;
+                                    border-bottom: 1px solid #ddd;
+                                    .bold;
+                                    color: #999;
+                                    .rem(font-size, 12);
+                                    .pointer;
+                                    
+
+                                    &:last-child {
+                                        border-bottom: none;
+                                    }
+
+                                    &:hover {
+                                        color: #333; 
+                                    }
+                                }
+                            }
+
+                        }                     
+                    }
+                }
+
                 div.theme-map {
                     .relative;
                     ul.tabs {
