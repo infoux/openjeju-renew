@@ -7090,10 +7090,12 @@ body {
                                 .inline-block;
                                 .rem(width, 70);
                                 .rem(font-size, 9);
+                                .rem(margin-top, 10);
 
                                 @media all and (min-width: 1200px) {
                                     width: 180px;
                                     font-size: 16px;
+                                    margin-top: 20px;
                                 }
                             }
 
@@ -7105,6 +7107,7 @@ body {
                             input {
                                 border: 1px solid #ccc;
                                 .rem(height, 20);
+                                vertical-align: bottom;
 
                                 @media all and (min-width: 1200px) {
                                     height: 28px;
@@ -7125,6 +7128,7 @@ body {
                                 color: @white;
                                 .pointer;
                                 .rem(font-size, 9); 
+                                vertical-align: top;
 
                                 @media all and (min-width: 1200px) {
                                     width: 125px;
@@ -7181,35 +7185,46 @@ body {
                                    }
                                 }
                                 
-                             
-                                div.bg-img {
-                                    .relative;
-                                    margin: 0 auto;
+                                div.bg-img-wrap {
                                     .rem(width, 110);
                                     .rem(height, 110);
-                                    background: url("../images/sub-user.svg") no-repeat;
+                                    margin: 0 auto;
+                                    .relative;
 
                                     @media all and (min-width: 1200px) {
-                                        margin: 0 0 10px 180px;
-
+                                        width: 200px;
+                                        margin: 0 0 0 185px;
                                     }
 
+                                    div.bg-img {
+                                        .rem(width, 110);
+                                        .rem(height, 110);
+                                        background: url("../images/sub-user.svg") no-repeat;
+                                        border-radius: 50%;
+                                        overflow: hidden;
+    
+                                        @media all and (min-width: 1200px) {
+                                            margin: 0 0 10px 0;
+    
+                                        }
+                                    }
+                                    
                                     div.file-btn {
                                         background: url("../images/sub-camera.svg") no-repeat;
                                         .absolute;
                                         right: 0;
                                         bottom: 0;
-                                        .rem(width, 35);
-                                        .rem(height, 35);
+                                        .rem(width, 40);
+                                        .rem(height, 40);
 
                                         @media all and (min-width: 1200px) {
-                                            left: 120px;
+                                            width: 75px;
+                                            height: 33px;
+                                            right: 0;
                                             top: 45px;
                                             background: #aeaeae;
                                             border: 1px solid #a3a3a3;
                                             color: @white;
-                                            width: 80px;
-                                            height: 28px;
                                         }
 
                                         p {
@@ -7229,15 +7244,14 @@ body {
                                             overflow: hidden;
                                             opacity: 0;
                                             background: url("../images/sub-camera.svg") no-repeat;
-                                            .rem(width, 35);
-                                            .rem(height, 35);
-                                            .pointer;
+                                            .rem(width, 40);
+                                            .rem(height, 40);
 
                                             @media all and (min-width: 1200px) {
                                                 .absolute;
                                                 top: 0;
                                                 width: 75px;
-                                                height: 28px;
+                                                height: 33px;
                                                 border-radius: 0;
                                                 
                                             }
@@ -7258,7 +7272,7 @@ body {
                                     .rem(height, 24);
 
                                     @media all and (min-width: 1200px) {
-                                        width: 193px;    
+                                        width: 200px;    
                                         height: 28px;      
                                     }
                                 }
@@ -7316,17 +7330,23 @@ body {
                                         .center;
                                         .rem(line-height, 24);
                                         border: 1px solid #ccc;
+                                        margin-top: 0;
 
                                         &:hover {
                                             .pointer;
                                             background: @main;
                                             color: @white;
                                         }
+
+                                        &:first-of-type {
+                                            border-right: none;
+                                        }
                                         
                                         @media all and (min-width: 1200px) {
                                             width: 50px;
                                             border: none;
-                                            margin-right: 10px;
+                                            padding-top: 2px;
+                                            vertical-align: middle;
                                 
                                             &:hover {
                                                 background: @white;
@@ -7343,7 +7363,6 @@ body {
                                             width: 18px;
                                             height: 18px;
                                             vertical-align: middle;
-                                            margin-right: 8px;
                                             .pointer;
                                         }
                                     }
@@ -7429,7 +7448,7 @@ body {
                                         .rem(height, 24);
                                         
                                         @media all and (min-width: 1200px) {
-                                            width: 193px;
+                                            width: 200px;
                                             height: 28px;
                                         }
                                     }
@@ -7468,7 +7487,7 @@ body {
 
                                     @media all and (min-width: 1200px) {
                                         .inline-block;
-                                        width: 193px;
+                                        width: 200px;
                                         height: 28px;
                                     }
                                 }
@@ -7515,6 +7534,7 @@ body {
                                         width: calc(~"100% - 190px");
                                         .rem(height, 24);
                                         margin: 0;
+                                        vertical-align: bottom;
 
                                         @media all and (min-width: 1200px) {
                                             width: 100px;
@@ -7527,6 +7547,7 @@ body {
                                         .rem(width, 90);
                                         .rem(height, 24);
                                         padding: 0;
+                                        vertical-align: top;
 
                                         @media all and (min-width: 1200px) {
                                             width: 110px;
@@ -7560,7 +7581,7 @@ body {
                                 div {
 
                                     input {
-                                        width: calc(~"100% - 190px");
+                                        width: 50%;
                                         .rem(height, 24);
                                         margin: 0;
                                         
@@ -7570,8 +7591,13 @@ body {
                                         }
                                     }
 
+                                    span {
+                                        .rem(width, 50);
+                                        .rem(margin, 0 2);
+                                    }
+
                                     select {
-                                        .rem(width, 108);
+                                        width: 42%;
                                         .rem(height, 24);
                                         .rem(font-size, 9);
 
@@ -7602,7 +7628,7 @@ body {
 
                                 div.ph-block {
                                     select {
-                                        width: calc(~"100% - 218px");
+                                        width: 24%;
                                         .rem(height, 24);
 
                                         @media all and (min-width: 1200px) {
@@ -7610,9 +7636,13 @@ body {
                                             height: 28px;
                                         }
                                     }
+                                    
+                                    span {
+                                        width: 5%;
+                                    }
 
                                     input {
-                                        .rem(width, 60);
+                                        width: 34%;
                                         .rem(height, 24);
 
                                         @media all and (min-width: 1200px) {

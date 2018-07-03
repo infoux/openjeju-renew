@@ -238,7 +238,9 @@
                         <ul>
                             <li class="user-img">
 
-                                <div class="bg-img">
+                                <div class="bg-img-wrap">
+                                    <div class="bg-img"></div>
+
                                     <div class="file-btn">
                                         <p>사진파일</p>
                                         <input type="file" name="user-img">
@@ -318,8 +320,11 @@
                                 <label>성별<b>*</b></label>
 
                                 <div>
-                                    <label><input type="radio" name="gender" value="남">남</label>
-                                    <label><input type="radio" name="gender" value="여">여</label>
+                                    <input id="man" type="radio" name="gender" value="남">
+                                    <label for="man">남</label>
+
+                                    <input id="woman" type="radio" name="gender" value="여">
+                                    <label for="woman">여</label>
                                 </div>
                             </li>
                         </ul>
@@ -371,7 +376,7 @@
                                 <label>이메일<b>*</b></label>
 
                                 <div>
-                                    <input type="text" id="user-email"> @
+                                    <input type="text" id="user-email"> <span>@</span>
 
                                     <select name="email" id="select-email">
                                         <option value="">이메일선택</option> 
@@ -416,9 +421,9 @@
                                         <option value="054">054</option>
                                         <option value="055">055</option>
                                         <option value="064">064</option>
-                                    </select> -
+                                    </select> <span>-</span>
 
-                                    <input type="text"> -
+                                    <input type="text"> <span>-</span>
                                     <input type="text">
                                 </div>
                             </li>
@@ -433,9 +438,9 @@
                                         <option value="016">016</option>
                                         <option value="017">017</option>
                                         <option value="019">019</option>
-                                    </select> -
+                                    </select> <span>-</span>
 
-                                    <input type="text"> -
+                                    <input type="text"> <span>-</span>
                                     <input type="text">
                                 </div>
                             </li>
