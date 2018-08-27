@@ -1,4 +1,4 @@
-// out: ./style.css, compress: true, sourceMap: false
+// out: ./style.css, compress: false, sourceMap: false
 @import "normalize.css";
 @import "rem.less";
 @import "fontello.css";
@@ -545,6 +545,7 @@ body {
         z-index: 800;
         .rem(height, 50);
         border-bottom: 1px solid rgba(227,227,227,0.5);
+        background:rgba(0,0,0,0.2);
         @media all and (min-width: 1200px) {
             .center;
             height: 148px;
@@ -586,23 +587,188 @@ body {
             }
 
             .util_menu {
-                .none;
-                .mapazero;
-
                 @media all and (min-width: 1200px) {
-                    .block;
+
                     .right;
+                    padding-right:100px;
+                }
+                &>ul {
+                    .none;
 
-                    li {
+                    @media all and (min-width: 1200px) {
+                        
+    
+                        .mapazero;
                         .inline-block;
-                        line-height: 40px;
-                        margin-left: 20px;
+                        li {
+                            .inline-block;
+                            line-height: 40px;
+                            margin-left: 20px;
 
-                        a {
-                            color: #ccc;
-                            font-size: 14px;
+                            a {
+                                color: #ccc;
+                                font-size: 14px;
+                            }
                         }
                     }
+                }
+
+                div.language {
+                    .absolute;
+                    .rem(left, 10);
+                    .rem(top, 12);
+                    color:@white;
+                    .zero;
+                    z-index:1000;
+    
+                    @media all and (min-width: 1200px) {
+                        left:auto;
+                        right:0;
+                        top:8px;
+                    }
+                    
+
+                    input {
+                        .none;
+                    }
+    
+                    i {
+                        .rem(font-size, 10);
+                        .top;
+    
+                        @media all and (min-width: 1200px) {
+                            font-size:14px;
+                        }
+    
+                        &::before {
+                            -ms-transform: rotate(180deg); 
+                            -webkit-transform: rotate(180deg); 
+                            transform: rotate(180deg);
+                            .ani();
+                        }
+                    }
+    
+                    label {
+                        .rem(line-height, 22);
+                        .rem(font-size, 12);
+    
+                        @media all and (min-width: 1200px) {
+                            .inline-block;
+                            
+                            font-size:14px;
+                            line-height:28px;
+                        }
+                        
+                        &::before {
+                            content:"";
+                            .top;
+                            .inline-block;
+                            .rem(width, 22);
+                            .rem(height, 22);
+                            .rem(margin, 0 4 0 0);
+    
+                            @media all and (min-width: 1200px) {
+                                .none;
+                            }
+                        }
+    
+                        &.ko {
+                            &::before {
+                                background:url("../images/flag-ko.svg") no-repeat center / 100% auto;
+                            }
+                        }
+    
+                        &.en {
+                            &::before {
+                                background:url("../images/flag-en.svg") no-repeat center / 100% auto;
+                            }
+                        }
+    
+                        &.jp {
+                            &::before {
+                                background:url("../images/flag-jp.svg") no-repeat center / 100% auto;
+                            }
+                        }
+    
+                        &.cn {
+                            &::before {
+                                background:url("../images/flag-cn.svg") no-repeat center / 100% auto;
+                            }
+                        }
+    
+                        &.ru {
+                            &::before {
+                                background:url("../images/flag-ru.svg") no-repeat center / 100% auto;
+                            }
+                        }
+                    }
+    
+                    ul {
+                        .none;
+                    }
+    
+                    input:checked + i {
+                        
+                        &::before {
+                            -ms-transform: rotate(0deg); 
+                            -webkit-transform: rotate(0deg); 
+                            transform: rotate(0deg);
+                            .ani();
+                        }
+                    }
+    
+                    input:checked + i + ul {
+                        .block;
+                        .absolute;
+                        .rem(top, 34);
+                        list-style:none;
+                        background:#333;
+                        border-radius:5px;
+                        .mapazero;
+    
+                        &::before {
+                            content:"";
+                            .absolute;
+                            .rem(top, -20);
+                            left:50%;
+                            .rem(width, 0);
+                            .rem(height, 0);
+                            .rem(margin-left, -10);
+                            .rem(border-width, 10);
+                            border-style:solid;
+                            border-color:transparent;
+                            border-bottom-color:#333;
+                        }
+    
+                        li {
+                            a {
+                                .block;
+                                .center;
+                                .rem(font-size, 10);
+                                color:@white;
+                                .rem(padding, 10);
+                                border-bottom:1px solid #555;
+    
+                                @media all and (min-width: 1200px) {
+                                    font-size:14px;
+                                    padding:14px;
+                                    min-width:100px;
+                                }
+    
+                                &:hover {
+                                    background:#555;
+                                }
+                            }
+    
+                            &:last-child {
+                                a {
+                                    border:none;
+                                }
+                            }
+                        }
+                    }
+    
+
                 }
 
             }
@@ -1189,7 +1355,8 @@ body {
                         .rem(margin, 0 auto);
                         .rem(border-radius, 33);
                         .zero;
-                        background:rgba(0,0,0,0.4);
+                        background:rgba(255,255,255,0.9);
+                        .drop-shadow();
 
                         @media all and (min-width: 1200px) {
                             width: 356px;
@@ -1203,19 +1370,20 @@ body {
                             .rem(height, 33);
                             .top;
                             .rem(font-size, 14);
-                            .rem(padding, 0 10);
+                            .rem(padding, 0 10 0 47);
                             background: none;
                             border: none;
-                            color: @white;
+                            color: #333;
                             outline: none;
-                            .placeholder(inherit, #ccc);
+                            .placeholder(inherit, #555);
+                            .center;
                             
 
                             @media all and (min-width: 1200px) {
                                 height: 50px;
-                                font-size: 18px;
+                                font-size: 22px;
                                 width: calc(~"100% - 50px");
-                                padding: 0 10px;
+                                padding: 0 10px 0 60px;
                             }
                         }
 
@@ -1236,7 +1404,7 @@ body {
                             i {
                                 .rem(font-size, 16);
                                 .top;
-                                color: @white;
+                                color: #555;
 
                                 @media all and (min-width: 1200px) {
                                     font-size:20px;
@@ -1265,7 +1433,8 @@ body {
                         width: calc(~"100% / 3");
 
                         @media all and (min-width: 1200px) {
-                            width: calc(~"100% / 6");
+                            white-space:nowrap;
+                            width: calc(~"(100% - 1px) / 6");
                             font-size: 18px;
                         }
                         &::after {
@@ -1487,7 +1656,6 @@ body {
                 .center;
 
                 h2 {
-                    .normal;
                     .rem(font-size, 22);
                     .rem(margin, 20 0);
 
@@ -1535,7 +1703,7 @@ body {
                     .relative;
 
                     @media all and (min-width: 1200px) {
-                        padding: 20px 0 40px calc(~"100% - 450px");
+                        padding: 20px 0 50px calc(~"100% - 450px");
                     }
 
                     li {
@@ -1549,20 +1717,20 @@ body {
                             width: calc(~"(100% - 6px) / 2");
                         }
 
+
                         &:last-child {
                             margin-left: 6px;
                             background: rgba(0,0,0,0.9);
 
                             a {
                                 color: @white;
+                                .flex;
 
                                 strong {
-                                    .rem(padding, 52 0 0);
                                     .normal;
                                     .rem(font-size, 26);
                                     .block;
                                     @media all and (min-width: 1200px) {
-                                        padding: 70px 0 0;
                                         font-size: 38px;
                                     }
                                 }
@@ -1595,7 +1763,7 @@ body {
 
                                 @media all and (min-width: 1200px) {
                                     font-size: 20px;
-                                    height: 78px;
+                                    height: 104px;
                                 }
 
                                 small {
@@ -1629,7 +1797,7 @@ body {
                                     color: #fcaf17;
 
                                     @media all and (min-width: 1200px) {
-                                        font-size: 14px;
+                                        font-size: 16px;
                                     }
 
                                     &::before {
@@ -1640,14 +1808,14 @@ body {
                         }
 
                         @media all and (min-width: 1200px) {
-                            height: 200px;
+                            height: 240px;
 
                             &:first-child {
                                 .absolute;
                                 left: 0;
                                 top: 20px;
                                 width: 740px;
-                                height: 410px;
+                                height: 490px;
 
                                 a {
                                     h3 {
@@ -1906,7 +2074,6 @@ body {
                 .relative;
 
                 h2 {
-                    .normal;
                     .rem(font-size, 22);
                     .rem(margin, 20 0);
 
@@ -1955,7 +2122,7 @@ body {
                         .rem(padding, 20 0);
 
                         @media all and (min-width: 1200px) {
-                            padding: 20px 0 40px;
+                            padding: 20px 0 50px;
                         }
 
                         .slick-slide {
@@ -2102,50 +2269,118 @@ body {
         section.rentcar {
             .center;
 
-            .container {
-                .center;
-                .rem(padding, 30);
+            @media all and (min-width: 1200px) {
+                padding:60px 0;
+                .zero;
+            }
+
+            &>div {
+                .left;
+                .relative;
+                .hidden;
+                .rem(margin, 10);
+                .rem(padding, 20 10);
 
                 @media all and (min-width: 1200px) {
-                    .left;
-                    padding: 60px 200px 90px;
-                    background: url("../images/bg-rentcar.jpg") no-repeat 522px 170px;
+                    .inline-block;
+                    margin:0;
+                    padding:30px 0;
+                    width:560px;
+
+                    &:first-child {
+                        margin-right:80px;
+                    }
                 }
 
+
+                &.banner01 {
+                    &::before {
+                        content:"";
+                        .block;
+                        .absolute;
+                        .rem(width, 100);
+                        .rem(height, 100);
+                        .rem(right, 0);
+                        .rem(top, 10);
+                        background:url("../images/bg-rentcar.jpg") no-repeat center / 100% 100%;
+
+                        @media all and (min-width: 1200px) {
+                            background:url("../images/bg-rentcar-pc.jpg") no-repeat center / 100% 100%;
+                            width:280px;
+                            height:250px;
+                            right:0;
+                            bottom:0;
+                            top:auto;
+                        }
+                    }
+                }
+
+                &.banner02 {
+                    &::before {
+                        content:"";
+                        .block;
+                        .absolute;
+                        .rem(width, 105);
+                        .rem(height, 103);
+                        .rem(right, 0);
+                        .rem(top, 0);
+                        background:url("../images/bg-jejumobile.jpg") no-repeat center / 100% 100%;
+
+                        @media all and (min-width: 1200px) {
+                            background:url("../images/bg-jejumobile-pc.jpg") no-repeat center / 100% 100%;
+                            width:300px;
+                            height:248px;
+                            right:0;
+                            bottom:0;
+                            top:auto;
+                        }
+                    }
+                }
                 h2 {
-                    .rem(font-size, 20);
-                    .normal;
+                    .rem(font-size, 18);
                     .rem(margin, 0 0 20);
                     word-break: keep-all;
-                    font-family: 'Jeju Gothic';
                     line-height:1.4;
+                    .relative;
+                    z-index:10;
 
                     @media all and (min-width: 1200px) {
-                        font-size: 38px;
+                        font-size: 28px;
                     }
 
                     small {
                         font-size: inherit;
                         .block;
-                        .rem(padding, 0 0 4);
+
+                        @media all and (min-width: 1200px) {
+                            font-size: 28px;
+                            .inline-block;
+                        }
 
                         span {
                             color: @main;
                         }
                     }
 
+                    strong {
+                        @media all and (min-width: 1200px) {
+                            .block;
+                        }
+                    }
+
                 }
 
                 p {
-                    .rem(font-size, 12);
-                    .rem(margin, 0 0 10);
-                    word-break: keep-all;
-                    color: #999;
-                    line-height: 1.4;
-
+                    .none;
                     @media all and (min-width: 1200px) {
+                        .block;
+                        .relative;
+                        z-index:10;
                         font-size: 16px;
-                        margin: 0 0 10px;
+                        margin: 0 0 4px;
+                        word-break:keep-all;
+                        color:#999;
+                        line-height:1.4;
                     }
 
                     u {
@@ -2164,11 +2399,14 @@ body {
                     color: #3a3d3e;
                     .rem(padding, 10 20);
                     .rem(margin, 10 0 0);
+                    .center;
+                    width:100%;
 
                     @media all and (min-width: 1200px) {
                         font-size: 18px;
                         padding: 14px 30px;
                         margin: 40px 0 0;
+                        width:auto;
                     }
 
                     span {
@@ -4330,6 +4568,7 @@ body {
                                 @media all and (min-width: 1200px) {
                                     .inline-block;
                                     padding: 15px;
+                                    min-height:210px;
 
                                 }
 
@@ -4348,6 +4587,7 @@ body {
 
                                     img {
                                         width: 100%;
+                                        min-height:100%;
                                     }
                                 }
                                 img {
@@ -4362,7 +4602,7 @@ body {
                                     @media all and (min-width: 1200px) {
                                         float: right;
                                         width: 840px;
-                                        font-size: 22px;
+                                        font-size: 28px;
                                     }
 
                                 }
@@ -4380,9 +4620,8 @@ body {
                                     @media all and (min-width: 1200px) {
                                         float: right;
                                         width: 840px;
-                                        height: 165px;
+                                        height: 138px;
                                         font-size: 14px;
-                                        padding-bottom:20px;
                                     }
                                 }
 
@@ -4443,16 +4682,18 @@ body {
                 ul.list {
                     .no-list;
                     .mapazero;
+                    .zero;
+                    border-top: 1px solid #ccc;
 
                     li {
                         .inline-block;
                         .relative;
                         width: 100%;
-                        .rem(padding, 10);
-                        .rem(margin, 0 0 10);
+                        .rem(padding, 20);
+                        margin:0;
                         background: @white;
-                        border: 1px solid #eee;
-                        .drop-shadow();
+                        border: 1px solid #ccc;
+                        border-top:0;
                         .zero;
 
                         a {
@@ -4466,6 +4707,7 @@ body {
                                     float: left;
                                     width: 262px;
                                     height: 208px;
+                                    margin-right:20px;
 
                                 }
 
@@ -4481,7 +4723,7 @@ body {
                                 .normal;
 
                                 @media all and (min-width: 1200px) {
-                                    width: 890px;
+                                    width: 870px;
                                     float: right;
                                     font-size: 24px;
                                     margin:10px 0 20px;
@@ -4494,7 +4736,7 @@ body {
                                 margin: 0;
 
                                 @media all and (min-width: 1200px) {
-                                    width: 890px;
+                                    width: 870px;
                                     float: right;
                                     font-size: 14px;
                                     min-height: 137px;
@@ -4508,8 +4750,8 @@ body {
                             .rem(right, 20);
                             .rem(top, 133);
                             border: none;
-                            background: white;
-                            color: @main;
+                            background: @main;
+                            color: @white;
                             .rem(width, 52);
                             .rem(height, 52);
                             border-radius: 50%;
@@ -4517,22 +4759,30 @@ body {
                             .drop-shadow();
 
                             @media all and (min-width: 1200px) {
-                                width: 60px;
-                                height: 60px;
+                                width: 80px;
+                                height: 80px;
+                                font-size:14px;
+                                border-radius:0 50% 0 0;
                                 right: auto;
-                                left: 20px;
-                                top: 148px;
+                                left: 0;
+                                top: auto;
+                                bottom: 0;
                             }
 
                             &.on {
-                                background: @main;
-                                color: @white;
+                                background: @white;
+                                color: @main;
                             }
 
                             i {
                                 .block;
                                 .rem(font-size, 20);
                                 .rem(margin, 0 0 2);
+
+                                @media all and (min-width: 1200px) {
+                                    font-size:32px;
+                                }
+    
                             }
 
                         }
@@ -10936,6 +11186,8 @@ body {
     footer#footer {
 
         div.footer-slogan {
+            .none;
+
             .center;
             background: url("../images/map-footer.svg") no-repeat #3a3d3e;
             background-position: center;
@@ -10961,6 +11213,7 @@ body {
                 }
             }
 
+
         }
 
         address {
@@ -10976,6 +11229,27 @@ body {
                 @media all and (min-width: 1200px) {
                     .left;
                     padding: 28px 0;
+                }
+
+                h3 {
+                    .block;
+                    .zero;
+                    .rem(margin, 10 auto 40);
+                    background:url("../images/party.png") no-repeat center / 100% 100%;
+                    .rem(width, 145);
+                    .rem(height, 15);
+
+                    @media all and (min-width: 1200px) {
+                        .mapazero;
+                        width:450px;
+                        height:50px;
+                        .absolute;
+                        right:0;
+                        bottom:40px;
+                    }
+
+
+
                 }
 
                 ul.util {
@@ -11029,7 +11303,7 @@ body {
                         font-size: 14px;
                         margin: 0 0 2px;
 
-                        &.attention {
+                        &.made {
                             margin-top: 20px;
                         }
                     }
