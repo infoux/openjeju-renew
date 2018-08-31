@@ -545,7 +545,7 @@ body {
         z-index: 800;
         .rem(height, 50);
         border-bottom: 1px solid rgba(227,227,227,0.5);
-        background:rgba(0,0,0,0.2);
+
         @media all and (min-width: 1200px) {
             .center;
             height: 148px;
@@ -6640,6 +6640,159 @@ body {
             }
         }
 
+        section.local-map {
+            .center;
+            
+            .container {
+                .rem(padding, 10 10 20);
+
+                @media all and (min-width: 1200px) {
+                    padding:20px 0 30px;
+                }
+
+                fieldset {
+                    .rem(padding-bottom, 10);
+                    .rem(margin-bottom, 10);
+                    border:none;
+
+
+                    dl {
+                        .zero;
+                        margin:0;
+
+                        @media all and (min-width: 1200px) {
+                            .inline-block;
+                            width:100%;
+                            padding:20px 40px;
+                        }
+
+                        dt {
+                            .rem(font-size, 12);
+                            .rem(line-height, 33);
+                            .center;
+
+                            @media all and (min-width: 1200px) {
+                                .left;
+                                float:left;
+                                width:90px;
+                                font-size:18px;
+                                line-height:44px;
+                            }
+                        }
+
+                        dd {
+                            .rem(margin, 0 0 10);
+                            .center;
+
+                            @media all and (min-width: 1200px) {
+                                .left;
+                                width:calc(~"50% - 90px");
+                                float:left;
+                                margin:0;
+                            }
+
+                            ul {
+                                .inline-block;
+                                margin:0;
+                                .rem(padding, 4);
+                                .rem(border-radius, 10);
+                                .hidden;
+                                background:#efefef;
+
+                                li {
+                                    .inline-block;
+
+                                    a {
+                                        .block;
+                                        .rem(line-height, 25);
+                                        .rem(padding, 0 6);
+                                        .rem(font-size, 11);
+                                        .rem(min-width, 42);
+        
+                                        @media all and (min-width: 1200px) {
+                                            font-size:16px;
+                                            line-height:36px;
+                                            padding:0 10px;
+                                        }
+
+
+
+
+                                        &.active {
+                                            background:@main;
+                                            color:@white;
+                                            border-color:transparent;
+                                            .rem(border-radius, 10);
+                                        }
+
+
+                                    }
+
+                                }
+                            }
+
+                            input[type="radio"] {
+                                .none;
+                            }
+
+                            label {
+                                .inline-block;
+                                .rem(line-height, 25);
+                                .rem(padding, 0 6);
+                                .rem(font-size, 11);
+
+                                @media all and (min-width: 1200px) {
+
+                                    font-size:16px;
+                                    line-height:44px;
+                                    padding:0 30px 0 0;
+                                }
+
+                                &::before {
+                                    content:"";
+                                    .relative;
+                                    .rem(top, 2);
+                                    .inline-block;
+                                    .rem(width, 8);
+                                    .rem(height, 8);
+                                    .rem(margin, 0 4 0 0);
+                                    border-radius:50%;
+                                    background:#ccc;
+                                    border:3px solid #eee;
+
+                                    @media all and (min-width: 1200px) {
+                                        top:4px;
+                                        width:14px;
+                                        height:14px;
+                                        margin:0 6px 0 0;
+                                    }
+                                }
+
+                            }
+
+                            input:checked + label {
+                                &::before {
+                                    background:#0075bc;
+                                }
+                            }
+
+
+                        }
+                    }
+
+                }
+
+                #map {
+                    .rem(height, 300);
+                    background:#eee;
+
+                    @media all and (min-width: 1200px) {
+                        height:500px;
+                    }
+                }
+            }
+        }
+
         section.list-type01 {
             .center;
 
@@ -9336,6 +9489,8 @@ body {
             .center;
             .container {
 
+                .zero;
+                .rem(margin, 0 0 30);
 
                 fieldset {
                     .rem(padding-bottom, 10);
@@ -9393,7 +9548,7 @@ body {
                                 @media all and (min-width: 1200px) {
                                     font-size:16px;
                                     line-height:36px;
-                                    padding:0 14px;
+                                    padding:0 10px;
                                     margin:0 5px 10px 0;
                                 }
                             }
@@ -9456,6 +9611,26 @@ body {
                             margin:0 auto 10px;
                         }
                     }
+                }
+
+                .panel-default {
+                    border:1px solid #eee;
+                    .rem(margin, 20 0);
+                    .rem(padding, 10);
+                    .rem(border-radius, 12);
+
+                    @media all and (min-width: 1200px) {
+                        &.wd2 {
+                            .inline-block;
+                            width:calc(~"(100% - 20px) / 2");
+    
+                            &:first-child {
+                                margin-right:20px;
+                            }
+                        }
+                       }
+
+                
                 }
 
 

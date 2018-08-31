@@ -380,7 +380,6 @@ body header {
   z-index: 800;
   height: 3.57142857rem;
   border-bottom: 1px solid rgba(227, 227, 227, 0.5);
-  background: rgba(0, 0, 0, 0.2);
 }
 @media all and (min-width: 1200px) {
   body header {
@@ -6028,6 +6027,138 @@ body div#content div.food-slider .container .outline .slick-list .item.slick-cur
     margin: 0 15px;
   }
 }
+body div#content section.local-map {
+  text-align: center;
+}
+body div#content section.local-map .container {
+  padding: 0.71428571rem 0.71428571rem 1.42857143rem;
+}
+@media all and (min-width: 1200px) {
+  body div#content section.local-map .container {
+    padding: 20px 0 30px;
+  }
+}
+body div#content section.local-map .container fieldset {
+  padding-bottom: 0.71428571rem;
+  margin-bottom: 0.71428571rem;
+  border: none;
+}
+body div#content section.local-map .container fieldset dl {
+  font-size: 0;
+  margin: 0;
+}
+@media all and (min-width: 1200px) {
+  body div#content section.local-map .container fieldset dl {
+    display: inline-block;
+    width: 100%;
+    padding: 20px 40px;
+  }
+}
+body div#content section.local-map .container fieldset dl dt {
+  font-size: 0.85714286rem;
+  line-height: 2.35714286rem;
+  text-align: center;
+}
+@media all and (min-width: 1200px) {
+  body div#content section.local-map .container fieldset dl dt {
+    text-align: left;
+    float: left;
+    width: 90px;
+    font-size: 18px;
+    line-height: 44px;
+  }
+}
+body div#content section.local-map .container fieldset dl dd {
+  margin: 0 0 0.71428571rem;
+  text-align: center;
+}
+@media all and (min-width: 1200px) {
+  body div#content section.local-map .container fieldset dl dd {
+    text-align: left;
+    width: calc(50% - 90px);
+    float: left;
+    margin: 0;
+  }
+}
+body div#content section.local-map .container fieldset dl dd ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0.28571429rem;
+  border-radius: 0.71428571rem;
+  overflow: hidden;
+  background: #efefef;
+}
+body div#content section.local-map .container fieldset dl dd ul li {
+  display: inline-block;
+}
+body div#content section.local-map .container fieldset dl dd ul li a {
+  display: block;
+  line-height: 1.78571429rem;
+  padding: 0 0.42857143rem;
+  font-size: 0.78571429rem;
+  min-width: 3rem;
+}
+@media all and (min-width: 1200px) {
+  body div#content section.local-map .container fieldset dl dd ul li a {
+    font-size: 16px;
+    line-height: 36px;
+    padding: 0 10px;
+  }
+}
+body div#content section.local-map .container fieldset dl dd ul li a.active {
+  background: #0075bc;
+  color: #fff;
+  border-color: transparent;
+  border-radius: 0.71428571rem;
+}
+body div#content section.local-map .container fieldset dl dd input[type="radio"] {
+  display: none;
+}
+body div#content section.local-map .container fieldset dl dd label {
+  display: inline-block;
+  line-height: 1.78571429rem;
+  padding: 0 0.42857143rem;
+  font-size: 0.78571429rem;
+}
+@media all and (min-width: 1200px) {
+  body div#content section.local-map .container fieldset dl dd label {
+    font-size: 16px;
+    line-height: 44px;
+    padding: 0 30px 0 0;
+  }
+}
+body div#content section.local-map .container fieldset dl dd label::before {
+  content: "";
+  position: relative;
+  top: 0.14285714rem;
+  display: inline-block;
+  width: 0.57142857rem;
+  height: 0.57142857rem;
+  margin: 0 0.28571429rem 0 0;
+  border-radius: 50%;
+  background: #ccc;
+  border: 3px solid #eee;
+}
+@media all and (min-width: 1200px) {
+  body div#content section.local-map .container fieldset dl dd label::before {
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    margin: 0 6px 0 0;
+  }
+}
+body div#content section.local-map .container fieldset dl dd input:checked + label::before {
+  background: #0075bc;
+}
+body div#content section.local-map .container #map {
+  height: 21.42857143rem;
+  background: #eee;
+}
+@media all and (min-width: 1200px) {
+  body div#content section.local-map .container #map {
+    height: 500px;
+  }
+}
 body div#content section.list-type01 {
   text-align: center;
 }
@@ -8461,6 +8592,10 @@ body div#content section.chart-tab .container a.on {
 body div#content section.chart {
   text-align: center;
 }
+body div#content section.chart .container {
+  font-size: 0;
+  margin: 0 0 2.14285714rem;
+}
 body div#content section.chart .container fieldset {
   padding-bottom: 0.71428571rem;
   margin-bottom: 0.71428571rem;
@@ -8518,7 +8653,7 @@ body div#content section.chart .container fieldset dl dd label {
   body div#content section.chart .container fieldset dl dd label {
     font-size: 16px;
     line-height: 36px;
-    padding: 0 14px;
+    padding: 0 10px;
     margin: 0 5px 10px 0;
   }
 }
@@ -8578,6 +8713,21 @@ body div#content section.chart .container fieldset button {
     line-height: 36px;
     font-size: 16px;
     margin: 0 auto 10px;
+  }
+}
+body div#content section.chart .container .panel-default {
+  border: 1px solid #eee;
+  margin: 1.42857143rem 0;
+  padding: 0.71428571rem;
+  border-radius: 0.85714286rem;
+}
+@media all and (min-width: 1200px) {
+  body div#content section.chart .container .panel-default.wd2 {
+    display: inline-block;
+    width: calc((100% - 20px) / 2);
+  }
+  body div#content section.chart .container .panel-default.wd2:first-child {
+    margin-right: 20px;
   }
 }
 body div#content section.weather-data {
