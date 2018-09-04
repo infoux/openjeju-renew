@@ -306,6 +306,51 @@ body .container {
     padding: 0;
   }
 }
+body section.head-event {
+  text-align: center;
+}
+body section.head-event .container {
+  font-size: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+body section.head-event .container a {
+  display: inline-block;
+}
+body section.head-event .container a img {
+  max-width: 100%;
+}
+body section.head-event .container a img.pc {
+  display: none;
+}
+body section.head-event .container a img.mobile {
+  display: inline-block;
+}
+@media all and (min-width: 1200px) {
+  body section.head-event .container a img.pc {
+    display: inline-block;
+  }
+  body section.head-event .container a img.mobile {
+    display: none;
+  }
+}
+body section.head-event .container button.close {
+  position: absolute;
+  right: 0.71428571rem;
+  top: 0.71428571rem;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #666;
+  color: #999;
+  font-size: 0.71428571rem;
+  padding: 0.35714286rem;
+}
+@media all and (min-width: 1200px) {
+  body section.head-event .container button.close {
+    right: 0;
+    font-size: 14px;
+  }
+}
 body section.alert {
   text-align: center;
   background: #1e1f1a;
@@ -353,22 +398,6 @@ body section.alert .container p.info {
 }
 @media all and (min-width: 1200px) {
   body section.alert .container p.info {
-    font-size: 14px;
-  }
-}
-body section.alert .container button.close {
-  position: absolute;
-  right: 0.71428571rem;
-  top: 0.71428571rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid #666;
-  color: #999;
-  font-size: 0.71428571rem;
-  padding: 0.35714286rem;
-}
-@media all and (min-width: 1200px) {
-  body section.alert .container button.close {
-    right: 0;
     font-size: 14px;
   }
 }
@@ -6153,11 +6182,83 @@ body div#content section.local-map .container fieldset dl dd input:checked + lab
 body div#content section.local-map .container #map {
   height: 21.42857143rem;
   background: #eee;
+  padding: 1.42857143rem;
 }
 @media all and (min-width: 1200px) {
   body div#content section.local-map .container #map {
     height: 500px;
   }
+}
+body div#content section.local-map .container #map div.local-map-pop {
+  position: absolute;
+  left: -150px;
+  top: -178px;
+  width: 300px;
+  height: 128px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 14px 14px 128px;
+  border: 1px solid #ccc;
+}
+body div#content section.local-map .container #map div.local-map-pop p.img {
+  position: absolute;
+  border-radius: 8px;
+  left: 13px;
+  top: 13px;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  overflow: hidden;
+}
+body div#content section.local-map .container #map div.local-map-pop p.img img {
+  min-width: 100%;
+  height: 100%;
+}
+body div#content section.local-map .container #map div.local-map-pop h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  word-break: keep-all;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+body div#content section.local-map .container #map div.local-map-pop u {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 0 0;
+  color: #0075bc;
+}
+body div#content section.local-map .container #map div.local-map-pop p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+}
+body div#content section.local-map .container #map div.local-map-pop::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  margin-left: -15px;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-top-color: #ccc;
+}
+body div#content section.local-map .container #map div.local-map-pop::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -28px;
+  margin-left: -14px;
+  width: 0;
+  height: 0;
+  border: 14px solid transparent;
+  border-top-color: #fff;
 }
 body div#content section.list-type01 {
   text-align: center;

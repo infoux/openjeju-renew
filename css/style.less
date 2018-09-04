@@ -463,6 +463,57 @@ body {
         }
     }
 
+    section.head-event {
+        .center;
+        .container {
+            .zero;
+            .center;
+            .mapazero;
+
+            a {
+                .inline-block;
+                img {
+                    max-width:100%;
+                    
+                    &.pc {
+                        .none;
+                    }
+                    &.mobile {
+                        .inline-block;
+                    }
+
+
+                    @media all and (min-width: 1200px) {
+                        &.pc {
+                            .inline-block;
+                        }
+                        &.mobile {
+                            .none;
+                        }
+                    }
+                }
+            }
+
+            button.close {
+                .absolute;
+                .rem(right, 10);
+                .rem(top, 10);
+                background:rgba(0, 0, 0, 0.8);
+                border:1px solid #666;
+                color:#999;
+                .rem(font-size, 10);
+                .rem(padding, 5);
+                
+                @media all and (min-width: 1200px) {
+                    right:0;
+                    font-size:14px;
+                }
+
+            }
+        }
+
+    }
+
     section.alert {
         .center;
         background:#1e1f1a;
@@ -513,23 +564,6 @@ body {
                 @media all and (min-width: 1200px) {
                     font-size:14px;
                 }
-            }
-
-            button.close {
-                .absolute;
-                .rem(right, 10);
-                .rem(top, 10);
-                background:rgba(255, 255, 255, 0.1);
-                border:1px solid #666;
-                color:#999;
-                .rem(font-size, 10);
-                .rem(padding, 5);
-                
-                @media all and (min-width: 1200px) {
-                    right:0;
-                    font-size:14px;
-                }
-
             }
 
         }
@@ -6785,9 +6819,85 @@ body {
                 #map {
                     .rem(height, 300);
                     background:#eee;
+                    .rem(padding, 20);
 
                     @media all and (min-width: 1200px) {
                         height:500px;
+                    }
+
+                    div.local-map-pop {
+                        .absolute;
+                        left:-150px;
+                        top:-178px;
+                        width:300px;
+                        height:128px;
+                        background:#fff;
+                        border-radius:10px;
+                        padding:14px 14px 14px 128px;
+                        border:1px solid #ccc;
+
+                        p.img {
+                            .absolute;
+                            border-radius:8px;
+                            left:13px;
+                            top:13px;
+                            width:100px;
+                            height:100px;
+                            margin:0;
+                            .hidden;
+
+                            img {
+                                min-width:100%;
+                                height:100%;
+                            }
+                        }
+
+                        h3 {
+                            margin:0 0 10px;
+                            font-size:18px;
+                            word-break:keep-all;
+                            .normal;
+                            .ellipse;
+                        }
+
+                        u {
+                            .block;
+                            text-decoration:none;
+                            font-size:16px;
+                            margin:4px 0 0;
+                            color:#0075bc;
+                        }
+                        p {
+                            .ellipse;
+                            font-size:16px;
+                        }
+
+                        &::before {
+                            content:"";
+                            .block;
+                            .absolute;
+                            left:50%;
+                            bottom:-30px;
+                            margin-left:-15px;
+                            width:0;
+                            height:0;
+                            border:15px solid transparent;
+                            border-top-color:#ccc;
+                        }
+
+                        &::after {
+                            content:"";
+                            .block;
+                            .absolute;
+                            left:50%;
+                            bottom:-28px;
+                            margin-left:-14px;
+                            width:0;
+                            height:0;
+                            border:14px solid transparent;
+                            border-top-color:#fff;
+                        }
+                        
                     }
                 }
             }
