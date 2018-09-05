@@ -8257,6 +8257,138 @@ body {
             }
         }
         
+        section.event-image {
+            .center;
+
+            .container {
+
+                img  {
+                    max-width:100%;
+                }
+            }
+        }
+        
+        section.list-event {
+            .center;
+
+            .container {
+
+                h2 {
+                    .center;
+                    .rem(font-size, 16);
+                    .rem(margin, 20 0 0);
+                    .rem(padding, 0 0 20);
+                    border-bottom:2px solid #0075bc;
+                        
+                    @media all and (min-width: 1200px) {
+                        font-size:26px;
+                        margin:40px 0 3px;
+                        padding:0 0 20px;
+                    }
+                }
+
+                ul.list {
+                    .mapazero;
+                    .no-list;
+                        
+                    @media all and (min-width: 1200px) {
+                        .zero;
+                        margin:30px 0 10px;
+                        border-bottom:1px solid #eee;
+                    }
+
+                    &>li {
+                        
+                        @media all and (min-width: 1200px) {
+                            .zero;
+                            .inline-block;
+                            width:calc(~"(100% - 90px) / 4");
+                            margin:0 30px 30px 0;
+
+                            &:nth-child(4n) {
+                                margin-right:0;
+                            }
+                        }
+
+                        a {
+                            .block;
+                            .relative;
+                            border-bottom:1px solid #eee;
+                            .rem(padding, 20 20 20 130);
+                            .rem(min-height, 140);
+
+                            @media all and (min-width: 1200px) {
+                                border:none;
+                                padding:0;
+                                .center;
+                            }
+
+                            
+                            p.image {
+                                .absolute;
+                                .rem(left, 0);
+                                .rem(top, 20);
+                                .rem(width, 120);
+                                .rem(height, 100);
+                                .zero;
+                                .rem(border-radius, 10);
+                                .hidden;
+
+                                @media all and (min-width: 1200px) {
+                                    .static;
+                                    width:100%;
+                                    height:180px;
+                                }
+
+                                img {
+                                    width:100%;
+                                    min-height:100%;
+                                }
+                            }
+
+                            h3 {
+                                .rem(margin, 0 0 26);
+                                .rem(font-size, 14);
+
+                                @media all and (min-width: 1200px) {
+                                    font-size:18px;
+                                    margin:14px 0 10px;
+                                }
+
+
+                                small {
+                                    .block;
+                                    .rem(margin, 4 0 0);
+                                    color:#0075bc;
+                                }
+                            }
+
+                            ul {
+                                .no-list;
+                                .mapazero;
+
+                                li {
+                                    .rem(font-size, 10);
+                                    color:#555;
+
+                                    @media all and (min-width: 1200px) {
+                                        .inline-block;
+                                        padding:0 2px;
+                                        font-size:14px;
+
+                                        strong {
+                                            .normal;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
         section.list-board {
             .center;
 
