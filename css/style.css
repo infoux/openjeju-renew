@@ -1050,6 +1050,9 @@ body header.no-issue {
 body header.no-issue .container h1 {
   background-image: url("../images/logo-c.svg");
 }
+body header.no-issue .container div.util_menu div.language {
+  color: #333;
+}
 body header.no-issue .container button.menuToggle i {
   color: #0075bc;
 }
@@ -7549,7 +7552,9 @@ body div#content section.list-event .container ul.list {
 @media all and (min-width: 1200px) {
   body div#content section.list-event .container ul.list > li {
     font-size: 0;
+    vertical-align: top;
     display: inline-block;
+    min-height: 326px;
     width: calc((100% - 90px) / 4);
     margin: 0 30px 30px 0;
   }
@@ -7571,7 +7576,7 @@ body div#content section.list-event .container ul.list > li a {
     text-align: center;
   }
 }
-body div#content section.list-event .container ul.list > li a p.image {
+body div#content section.list-event .container ul.list > li a p.img {
   position: absolute;
   left: 0;
   top: 1.42857143rem;
@@ -7582,18 +7587,18 @@ body div#content section.list-event .container ul.list > li a p.image {
   overflow: hidden;
 }
 @media all and (min-width: 1200px) {
-  body div#content section.list-event .container ul.list > li a p.image {
+  body div#content section.list-event .container ul.list > li a p.img {
     position: static;
     width: 100%;
     height: 180px;
   }
 }
-body div#content section.list-event .container ul.list > li a p.image img {
+body div#content section.list-event .container ul.list > li a p.img img {
   width: 100%;
   min-height: 100%;
 }
 body div#content section.list-event .container ul.list > li a h3 {
-  margin: 0 0 1.85714286rem;
+  margin: 0 0 0.28571429rem;
   font-size: 1rem;
 }
 @media all and (min-width: 1200px) {
@@ -7604,7 +7609,7 @@ body div#content section.list-event .container ul.list > li a h3 {
 }
 body div#content section.list-event .container ul.list > li a h3 small {
   display: block;
-  margin: 0.28571429rem 0 0;
+  margin: 0.42857143rem 0 0;
   color: #0075bc;
 }
 body div#content section.list-event .container ul.list > li a ul {
@@ -7614,17 +7619,21 @@ body div#content section.list-event .container ul.list > li a ul {
 }
 body div#content section.list-event .container ul.list > li a ul li {
   font-size: 0.71428571rem;
-  color: #555;
+  color: #0075bc;
+  padding: 0.71428571rem 0 0;
 }
 @media all and (min-width: 1200px) {
   body div#content section.list-event .container ul.list > li a ul li {
     display: inline-block;
-    padding: 0 2px;
+    padding: 6px 0 0;
     font-size: 14px;
   }
-  body div#content section.list-event .container ul.list > li a ul li strong {
-    font-weight: 400;
-  }
+}
+body div#content section.list-event .container ul.list > li a ul li strong {
+  font-weight: 400;
+  color: #555;
+  line-height: 1.4;
+  word-break: keep-all;
 }
 body div#content section.list-board {
   text-align: center;
@@ -7774,6 +7783,9 @@ body div#content section.view-board .container div.text {
   line-height: 1.6;
   color: #555;
 }
+body div#content section.view-board .container div.text img {
+  max-width: 100%;
+}
 @media all and (min-width: 1200px) {
   body div#content section.view-board .container div.text {
     font-size: 18px;
@@ -7796,6 +7808,9 @@ body div#content section.view-board .container ul.file li {
   font-size: 0.57142857rem;
   color: #555;
   margin: 0 0 0.28571429rem;
+}
+body div#content section.view-board .container ul.file li img {
+  max-width: 100%;
 }
 @media all and (min-width: 1200px) {
   body div#content section.view-board .container ul.file li {
@@ -8271,6 +8286,52 @@ body div#content section.write-board .container ul.file li {
 }
 body div#content section.write-board .container ul.file li input {
   margin: 0 0.28571429rem;
+}
+body div#content section.write-board .container div.file {
+  background: #f4f4f4;
+  border: 1px solid #eee;
+  padding: 0.71428571rem;
+}
+body div#content section.write-board .container div.file h4 {
+  font-size: 0.85714286rem;
+}
+body div#content section.write-board .container div.file ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.71428571rem 0 0;
+}
+body div#content section.write-board .container div.file ul li p {
+  margin: 0 0 0.42857143rem;
+}
+@media all and (min-width: 1200px) {
+  body div#content section.write-board .container div.file ul li p {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+body div#content section.write-board .container div.file ul li p canvas {
+  margin: 0 0.42857143rem 0 0;
+  border: 1px solid #ccc;
+}
+body div#content section.write-board .container div.file ul li p span {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 50px;
+  padding: 0 0.71428571rem;
+  font-size: 0.85714286rem;
+  background: rgba(255, 255, 255, 0.4);
+}
+@media all and (min-width: 1200px) {
+  body div#content section.write-board .container div.file ul li p span {
+    font-size: 14px;
+  }
+}
+body div#content section.write-board .container div.file ul li p button {
+  vertical-align: top;
+  height: 50px;
+  background: #000;
+  color: #fff;
+  border: none;
 }
 body div#content section.write-board .container div.btn-area {
   border-top: 2px solid #a4a4a4;

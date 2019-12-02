@@ -1309,6 +1309,13 @@ body {
                     background-image: url("../images/logo-c.svg");
                 }
 
+                div.util_menu {
+                    div.language {
+                        color:#333;
+                    }
+                    
+                }
+
                 button.menuToggle {
                     i {
                         color: @main;
@@ -8301,7 +8308,9 @@ body {
                         
                         @media all and (min-width: 1200px) {
                             .zero;
+                            .top;
                             .inline-block;
+                            min-height:326px;
                             width:calc(~"(100% - 90px) / 4");
                             margin:0 30px 30px 0;
 
@@ -8324,7 +8333,7 @@ body {
                             }
 
                             
-                            p.image {
+                            p.img {
                                 .absolute;
                                 .rem(left, 0);
                                 .rem(top, 20);
@@ -8347,7 +8356,7 @@ body {
                             }
 
                             h3 {
-                                .rem(margin, 0 0 26);
+                                .rem(margin, 0 0 4);
                                 .rem(font-size, 14);
 
                                 @media all and (min-width: 1200px) {
@@ -8358,7 +8367,7 @@ body {
 
                                 small {
                                     .block;
-                                    .rem(margin, 4 0 0);
+                                    .rem(margin, 6 0 0);
                                     color:#0075bc;
                                 }
                             }
@@ -8369,17 +8378,23 @@ body {
 
                                 li {
                                     .rem(font-size, 10);
-                                    color:#555;
+                                    color:#0075bc;
+                                    .rem(padding, 10 0 0);
 
                                     @media all and (min-width: 1200px) {
                                         .inline-block;
-                                        padding:0 2px;
+                                        padding:6px 0 0;
                                         font-size:14px;
 
-                                        strong {
-                                            .normal;
-                                        }
                                     }
+
+                                    strong {
+                                        .normal;
+                                        color:#555;
+                                        line-height:1.4;
+                                        word-break:keep-all;
+                                    }
+
                                 }
                             }
                         }
@@ -8549,6 +8564,10 @@ body {
                     line-height:1.6;
                     color:#555;
 
+                    img {
+                        max-width:100%;
+                    }
+
                     @media all and (min-width: 1200px) {
                         font-size: 18px;
                         padding: 20px;
@@ -8573,6 +8592,10 @@ body {
                         color:#555;
                         .rem(margin, 0 0 4);
 
+                        img {
+                            max-width:100%;
+                        }
+
                         @media all and (min-width: 1200px) {
                             font-size: 12px;
                             margin:0 0 10px;
@@ -8584,6 +8607,7 @@ body {
                                 .rem(margin-right, 2);
                             }
                         }
+                        
                     }
                 }
 
@@ -9118,6 +9142,61 @@ body {
                             .rem(margin, 0 4);
                         }
                     }
+                }
+
+                div.file {
+                    background:#f4f4f4;
+                    border:1px solid #eee;
+                    .rem(padding, 10);
+
+                    h4 {
+                        .rem(font-size, 12);
+                    }
+
+                    ul {
+                        .no-list;
+                        padding:0;
+                        .rem(margin, 10 0 0);
+
+                        li {
+                            p {
+                                .rem(margin, 0 0 6);
+
+                                @media all and (min-width: 1200px) {
+                                    .inline-block;
+                                    margin-left:10px;
+                                }
+
+                                canvas {
+                                    .rem(margin, 0 6 0 0);
+                                    border:1px solid #ccc
+                                }
+
+                                span {
+                                    .inline-block;
+                                    .top;
+                                    line-height:50px;
+                                    .rem(padding, 0 10);
+                                    .rem(font-size, 12);
+                                    background:rgba(255,255,255,0.4);
+
+                                    @media all and (min-width: 1200px) {
+                                        font-size:14px;
+                                    }
+                                }
+
+                                button {
+                                    .top;
+                                    height:50px;
+                                    background:#000;
+                                    color:#fff;
+                                    border:none;
+                                }
+                            }
+                        }
+
+                    }
+
                 }
 
                 div.btn-area {
